@@ -5,7 +5,7 @@
  * Course structure and strategy
  * Course material availability
  
-2. Scopes part I
+2. [Scopes part I](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/scopes)
  * What it is
  * Real world examples (Good vs Evil)
  * LHS and RHS look up, Nested scope and Lexical scope
