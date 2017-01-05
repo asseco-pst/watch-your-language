@@ -28,11 +28,11 @@ Each of the following topics should not take longer than 1 hour and must be as m
  * Objects
  * Prototypes
             	
-5. Asynchronous programming part I
+5. [Asynchronous programming part I](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async)
  * Sync vs Async
  * Event loop
  
-6. Asynchronous programming part II
+6. [Asynchronous programming part II](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async)
  * Callbacks and Promises
 
 7. Best practices
