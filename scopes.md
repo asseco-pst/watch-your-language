@@ -8,16 +8,19 @@ JavaScript is in fact a *compiled* language instead of  a *"dynamic"* or *"inter
 ## What it is
 Scope is what we call a *set of rules* that determines where and how a variable (identifier) can be looked-up.
 
-There are two kinds of look-ups. The LHS (left-hand-side) reference, when you are doing an assigning to a variable and, in the other hand, the RHS look-up (right-hand-side), when you are retrieving a variable value.
+There are two kinds of look-ups. The LHS (left-hand-side) reference, when you are doing an assigning to a variable and the RHS look-up (right-hand-side), when you are retrieving a variable value.
 
 Since JavaScript is compiled, its Engine first compiles code before it executes, spliting up statements like ```var a = 2;``` into two separate steps:
 
- 1. First, var a to declare it in that Scope. This is performed at the beginning, before code execution.
- 2. Later, a = 2 to look up the variable (LHS reference) and assign to it if found.
+ 1. First, ```var a``` to declare it in that Scope. This is performed at the beginning, before code execution.
+ 2. Later, ```a = 2``` to look up the variable (LHS reference) and assign to it if found.
 
 ## Global scope
 
-## Compiler Theory
+## References
+[Everything you wanted to know about JavaScript scope](https://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
+
+[You Don't Know JS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures)
 
 ```javascript
 function() {
