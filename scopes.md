@@ -36,10 +36,10 @@ function foo(a) {
 foo( 2 );
 ```
 
-1. Here there's a LHS lookup for ```foo``` which is executed
-2. There's a implied ```a = 2```, performing a LHS lookup for ```a```
-3. There's a RHS lookup for the ```console``` object, and a property resolution for the method ```log```
-4. There's a RHS lookup for the ```a``` which value is passed as an argument to ```console.log(...)```
+1. Here there's a LHS look-up for ```foo``` which is executed
+2. There's a implied ```a = 2```, performing a LHS look-up for ```a```
+3. There's a RHS look-up for the ```console``` object, and a property resolution for the method ```log```
+4. There's a RHS look-up for the ```a``` which value is passed as an argument to ```console.log(...)```
 
 ## Global scope
 
