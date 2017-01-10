@@ -54,7 +54,10 @@ Many people says that global socpe is bad, but in fact it is your friend. You ne
 With global scope and namespacing you can develop real cool and well structured applications.
 
 ### JS namespacing example
-#### Using Object Literal Notation
+<table>
+ <tr><th>Using Object Literal Notation</th></tr>
+ <tr>
+  <td>
 ```javascript
 var calculator = {
  sum: function(a, b) {
@@ -67,8 +70,12 @@ var calculator = {
 
 calculator.sum(1, 1); // 2
 ```
-
-#### Using Module Pattern
+  </td>
+ </tr>
+ <tr><th>Using Module Pattern</th></tr>
+ <tr>
+  <td>
+```javascript
 var calculator = (function(){
  function sum(a, b) {
   return a + b;
@@ -83,6 +90,11 @@ return {
  subtract: subtract,
 }
 }());
+```
+  </td>
+ </tr>
+</table>
+#### 
 
 ## References
 [Everything you wanted to know about JavaScript scope](https://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
