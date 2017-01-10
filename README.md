@@ -11,25 +11,27 @@ Each of the following topics should not take longer than 1 hour and must be as m
  * Real world examples (Good vs Evil)
  * LHS and RHS look up, Nested scope and Lexical scope
  * Function vs block scope
- 
-2. Scopes part II
  * Hoisting
  * Closures
  
-3. this and Object Prototypes
+2. this and Object Prototypes
  * “Let’s settle this”
  * Objects
  * Prototypes
             	
-4. [Asynchronous programming part I](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async)
+3. [Asynchronous programming part I](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async)
  * Sync vs Async
  * Event loop
  
-5. [Asynchronous programming part II](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async)
+4. [Asynchronous programming part II](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async)
  * Callbacks and Promises
 
-6. Best practices
+5. Best practices part I
  * DRY - Don’t repeat yourself
  * Single responsibility + Component driven
  * ESLint
+ 
+6. Best practices part II
+ * KISS
+ * FP
  
