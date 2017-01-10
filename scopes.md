@@ -219,8 +219,89 @@ var a = 2;
 ```
 
 From the code snippet 1, it may be tenting to awnser ```2``` or to awnser that *"ReferenceError"* will be thrown.
-
 In fact, neither the awnsers is correct. ```undefined``` is the output because of **Hoisting**.
+
+Remember that since JavaScript is compiled, its Engine first compiles code before it executes, spliting up statements like var a = 2; (VariableDeclaration) into two separate steps? That's what is happenning here.
+
+Our code snippet 1 should be thought of as being handled like this:
+```javascript
+var a;
+```
+```javascript
+a = 2;
+
+console.log( a );
+```
+...where the first part is the compilation and the second part is the execution.
+
+Similarly, our code snippet 2 is actually processed as:
+```javascript
+var a;
+```
+```javascript
+console.log( a );
+
+a = 2;
+```
+
+**Hoisting**: declaration comes before assignment.
+
+**So Hoisting can be described as**: "is when variable and/or function declarations are "moved" from where they appear in the flow of the code to the top of the code".
+
+Code snippet 3:
+```javascript
+foo();
+
+function foo() {
+    console.log( a ); // undefined
+
+    var a = 2;
+}
+```
+
+The ```foo```'s declaration is hoisted, such that the call on the first line is able to execute.
+
+**Note**: It's also important to note that **hoisting is per-scope**.
+
+Function declarations are hoisted, as we just saw. But function expressions are not.
+```javascript
+foo(); // not ReferenceError, but TypeError!
+
+var foo = function bar() {
+    // ...
+};
+```
+The variable identifier ```foo``` is hoisted and attached to the enclosing scope (global) of this program, so ```foo()``` doesn't fail as a *ReferenceError*. But ```foo``` has no value yet (as it would if it had been a true function declaration instead of expression). So, ```foo()``` is attempting to invoke the *undefined* value, which is a *TypeError* illegal operation.
+
+### Functions First
+Both function declarations and variable declarations are hoisted, but functions are hoisted first, and then variables.
+
+```javascript
+foo(); // 1
+
+var foo;
+
+function foo() {
+    console.log( 1 );
+}
+
+foo = function() {
+    console.log( 2 );
+};
+```
+
+This snippet is interpreted by the Engine as:
+```
+function foo() {
+    console.log( 1 );
+}
+
+foo(); // 1
+
+foo = function() {
+    console.log( 2 );
+};
+```
 
 ## References
 [Everything you wanted to know about JavaScript scope](https://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
