@@ -10,10 +10,36 @@ Scope is what we call a *set of rules* that determines where and how a variable 
 
 There are two kinds of look-ups. The LHS (left-hand-side) reference, when you are doing an assigning to a variable and the RHS look-up (right-hand-side), when you are retrieving a variable value.
 
-Since JavaScript is compiled, its Engine first compiles code before it executes, spliting up statements like ```var a = 2;``` into two separate steps:
+## LHS and RHS look up
 
- 1. First, ```var a``` to declare it in that Scope. This is performed at the beginning, before code execution.
- 2. Later, ```a = 2``` to look up the variable (LHS reference) and assign to it if found.
+**LHS** (left-hand-side) occurs every time you are trying to assign a value to a variable. Think of it like **"who's the target of the assignment"**
+
+**RHS** (right-hand-side) occurs every time you are trying to access to the value from a variable. Think of it like **"who's the source of the assignment"**
+
+### LHS example
+
+Since JavaScript is compiled, its Engine first compiles code before it executes, spliting up statements like ```var a = 2;``` (*VariableDeclaration*) into two separate steps:
+
+ 1. First, ```var a``` (*Identifier*)  to declare it in that Scope. This is performed at the beginning, before code execution.
+ 2. Later, ```a = 2``` (*AssignmentExpression*) to look up the variable (LHS reference) and assign to it if found.
+
+### RHS example
+LHS and RHS doesn't necessarily mean "left/right side of the = assignment operator". For example ```console.log( a );``` is a RHS reference to the variable ```a```. Here we are looking up to retrieve the value of ```a```so that can be  passed to the ```console.log(...)```.
+
+### RHS && LHS example
+
+```javacript
+function foo(a) {
+    console.log( a ); // 2
+}
+
+foo( 2 );
+```
+
+1. Here there's a LHS lookup for ```foo``` which is executed
+2. There's a implied ```a = 2```, performing a LHS lookup for ```a```
+3. There's a RHS lookup for the ```console``` object, and a property resolution for the method ```log```
+4. There's a RHS lookup for the ```a``` which value is passed as an argument to ```console.log(...)```
 
 ## Global scope
 
