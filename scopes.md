@@ -8,13 +8,13 @@ JavaScript is in fact a *compiled* language instead of  a *"dynamic"* or *"inter
 ## What it is
 Scope is what we call a *set of rules* that determines where and how a variable (identifier) can be looked-up.
 
-There are two kinds of look-ups. The LHS (left-hand-side) reference, when you are doing an assigning to a variable and the RHS look-up (right-hand-side), when you are retrieving a variable value.
+There are two kinds of look-ups. The LHS (left-hand-side) reference and the RHS (right-hand-side) look-up.
 
-## LHS and RHS look up
+## LHS and RHS
 
-**LHS** (left-hand-side) occurs every time you are trying to assign a value to a variable. Think of it like **"who's the target of the assignment"**
+**LHS** (left-hand-side) reference occurs every time you are trying to assign a value to a variable. Think of it like **"who's the target of the assignment"**
 
-**RHS** (right-hand-side) occurs every time you are trying to access to the value from a variable. Think of it like **"who's the source of the assignment"**
+**RHS** (right-hand-side) look-up occurs every time you are trying to access to the value from a variable. Think of it like **"who's the source of the assignment"**
 
 ### LHS example
 
