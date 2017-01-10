@@ -47,13 +47,31 @@ foo( 2 );
 var name = 'John';
 ```
 
-When you are writting your first JavaScript line, you're on the *global scope*!! **DANGER! DANGER!**.
+When you are writting your first JavaScript line, you're on the *global scope*!! **May day may day!**.
 
-Many people says that global socpe is bad, but in fact it is your friend. You need it to create modules/APIs that are available across scopes.
+Many people say that global scope is bad, but in fact it is your friend. You need it to create modules/APIs that are available across scopes.
 
-With global scope and namespacing you can develop real cool and well structured applications.
+With global scope and proper namespacing you can develop really cool and well structured applications.
+
+## Local scope
+Local scope is any scope that is created past the global scope. Typically there is only a global scope and each function defined has its own (nested) local scope.
+
+If I create a function and declare variables in it, these become locally scoped. I.E, these are only available inside that function.
+
+```javascript 
+// Scope A: Global scope out here
+var myFunction = function () {
+  // Scope B: Local scope in here
+  var foo = 1;
+};
+```
 
 ### JS namespacing example
+Like mentioned before, with proper namespacing and global scope you can build awesome things.
+Here's and example of a variable ```calculator``` that is globally available and offers two methods that are only available when using the *"calculator"* namespace.
+
+Here the *sum* and *subtract* functions are only available under the *calculator's* scope, keeping the global scope clean.
+
 **Using Object Literal Notation**
 ```javascript
 var calculator = {
