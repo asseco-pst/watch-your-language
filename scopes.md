@@ -28,7 +28,7 @@ LHS and RHS doesn't necessarily mean "left/right side of the = assignment operat
 
 ### RHS && LHS example
 
-```javacript
+```javascript
 function foo(a) {
     console.log( a ); // 2
 }
