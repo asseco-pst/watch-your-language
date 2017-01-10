@@ -1,9 +1,9 @@
 # Scopes
 Perhaps one of the most fundamental things you'll need to quickly come to writing bulletproof code and being a better developer.
-If you do understand scopes, you understand where variables/functions are accessible, be able to change the scope of your code’s context and be able to write faster and more maintainable code, as well as debug much faster.
 
-Although JavaScript can much of the times be identified as a *"dynamic"* or *"interpreted"* , it is in fact a *compiled* language and this has all to have to how variables are defined and accessed.
-The JS engine compiles your code right before (and sometimes during!) execution. 
+If you do understand scopes, you do understand where variables/functions are accessible, you are able to change the scope of your code’s context and be able to write faster and more maintainable code, as well as debug much faster.
+
+JavaScript is in fact a *compiled* language instead of  a *"dynamic"* or *"interpreted"* language, like it is described most of the times. In this chapter we'll see how the JavaScript engine affects how variables and functions are defined and how these are accessed.
 
 ## What it is
 Scope is what we call a *set of rules* that determines where and how a variable (identifier) can be looked-up.
