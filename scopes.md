@@ -432,7 +432,7 @@ Secondly, the ```CoolModule()``` function returns an object, denoted by the obje
 
 This object return value is assigned to the variable ```CoolModule```, and then we can access those property methods on the API, like ```CoolModule.doSomething()```.
 
-Now we can see closures all around our existing code, and we have the ability to recognize and leverage them to our own benefit!
+**Now we can see closures all around our existing code, and we have the ability to recognize and leverage them to our own benefit!**
 
 ## References
 [Everything you wanted to know about JavaScript scope](https://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
