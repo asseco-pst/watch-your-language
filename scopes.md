@@ -21,7 +21,7 @@ There are two kinds of look-ups. LHS (left-hand-side) and RHS (right-hand-side) 
 Since JavaScript is compiled, its Engine first compiles code before it executes, spliting up statements like ```var a = 2;``` (*VariableDeclaration*) into two separate steps:
 
  1. First, ```var a``` (*Identifier*)  to declare it in that Scope. This is performed at the beginning, before code execution.
- 2. Later, ```a = 2``` (*AssignmentExpression*) to look up the variable (LHS reference) and assign to it if found. If not found, the variable is declared in the outer most scope (the global scope).
+ 2. Later, ```a = 2``` (*AssignmentExpression*) to look up the variable (LHS reference) and assign to it if found. If not found, the variable is declared in the outermost scope (the global scope).
 
 **RHS example**
 
@@ -183,17 +183,18 @@ var calculator = (function(){
 ```
 
 ### Nested Scope
-Generally, your code is full on scopes inside each other. This happens when you have a function nested inside another function.
+Generally, your code is full of scopes inside each other. This happens when you have a function nested inside another function.
 
-If a function can not be found in the immediate scope, the next outer containing scope is consulted, continuing until found or until the outermost (global) scope has been reached.
+If a function cannot be found in the immediate scope, the next outer containing scope is consulted, continuing until found or until the outermost (global) scope has been reached.
 
 ```javascript
 function foo(a) {
-    console.log(a + b); // 2
+  console.log(a + b);
 }
 
-var bar = 2;
-foo(2);
+var b = 2;
+
+foo(2); // 4
 ```
 
 ```b``` cannot be resolved inside the function ```foo```, but it can be resolved in the Scope surrounding it (in this case, the global).
@@ -230,7 +231,7 @@ There are 3 nestes scopes in the above code snippet. Which are identified in the
 ## Hoisting
 There's a temptation to think that all of the code you see in a JavaScript program is interpreted line-by-line, top-down in order, as the program executes. While that is substantially true, there's one part of that assumption which can lead to incorrect thinking about your program.
 
-Code snippet 1:
+**Code snippet 1:**
 ```javascript
 a = 2;
 
@@ -239,21 +240,23 @@ var a;
 console.log(a); // output?
 ```
 
-Some would expect undefined, since the var a statement comes after the a = 2, and it would seem natural to assume that the variable is re-defined, and thus assigned the default undefined. However, the output will be 2.
+Some would expect ```undefined```, since the ```var``` a statement comes after the ```a = 2```, and it would seem natural to assume that the variable is re-defined, and thus assigned the default undefined. 
+However, the output will be ```2```.
 
-Code snippet 2:
+**Code snippet 2:**
 ```javascript
 console.log(a); // output?
 
 var a = 2;
 ```
 
-From the code snippet 1, it may be tenting to awnser ```2``` or to awnser that *"ReferenceError"* will be thrown.
+From the code snippet 1, it may be tenting to awnser ```2``` or to awnser that ```ReferenceError``` will be thrown.
 In fact, neither the awnsers is correct. ```undefined``` is the output because of **Hoisting**.
 
-Remember that since JavaScript is compiled, its Engine first compiles code before it executes, spliting up statements like var a = 2; (VariableDeclaration) into two separate steps? That's what is happenning here.
+Remember that since JavaScript is compiled, its Engine first compiles code before it executes, spliting up statements like ```var a = 2;``` (VariableDeclaration) into two separate steps? 
+That's what's happenning here.
 
-Our code snippet 1 should be thought of as being handled like this:
+Our *code snippet 1* should be thought of as being handled like this:
 ```javascript
 var a;
 ```
@@ -264,7 +267,7 @@ console.log( a );
 ```
 ...where the first part is the compilation and the second part is the execution.
 
-Similarly, our code snippet 2 is actually processed as:
+Similarly, our *code snippet 2* is actually processed as:
 ```javascript
 var a;
 ```
@@ -278,7 +281,7 @@ a = 2;
 
 **So Hoisting can be described as**: "is when variable and/or function declarations are "moved" from where they appear in the flow of the code to the top of the code".
 
-Code snippet 3:
+**Code snippet 3:**
 ```javascript
 foo();
 
@@ -301,7 +304,7 @@ var foo = function bar() {
     // ...
 };
 ```
-The variable identifier ```foo``` is hoisted and attached to the enclosing scope (global) of this program, so ```foo()``` doesn't fail as a *ReferenceError*. But ```foo``` has no value yet (as it would if it had been a true function declaration instead of expression). So, ```foo()``` is attempting to invoke the *undefined* value, which is a *TypeError* illegal operation.
+The variable identifier ```foo``` is hoisted and attached to the enclosing scope (global) of this program, so ```foo()``` doesn't fail as a ```ReferenceError```. But ```foo``` has no value yet (as it would if it had been a true function declaration instead of expression). So, ```foo()``` is attempting to invoke the ```undefined``` value, which is a ```TypeError``` illegal operation.
 
 ### Functions First
 Both function declarations and variable declarations are hoisted, but functions are hoisted first, and then variables.
