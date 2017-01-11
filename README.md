@@ -7,12 +7,11 @@ Each of the following topics should not take longer than 1 hour and must be as m
 # Syllabus
 
 1. [Scopes](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/scopes)
- * What it is
- * Real world examples (Good vs Evil)
- * LHS and RHS look up, Nested scope and Lexical scope
- * Function vs block scope
- * Hoisting
- * Closures
+ * [What it is](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/scopes#what-it-is)
+ * [Function vs block scope](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/scopes#local-scope)
+ * [Nested scope](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/scopes#nested-scope)
+ * [Hoisting](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/scopes#hoisting)
+ * [Closures](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/scopes#closures)
  
 2. this and Object Prototypes
  * “Let’s settle this”
