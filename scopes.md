@@ -8,11 +8,11 @@ JavaScript is in fact a *compiled* language instead of  a *"dynamic"* or *"inter
 ## What it is
 Scope is what we call a *set of rules* that determines where and how a variable (identifier) can be looked-up. It refers to the current context of your code and can be *globally* or *locally* defined.
 
-There are two kinds of look-ups. The LHS (left-hand-side) reference and the RHS (right-hand-side) look-up.
+There are two kinds of look-ups. LHS (left-hand-side) and RHS (right-hand-side) look-ups.
 
 ### LHS and RHS
 
-**LHS** (left-hand-side) reference occurs every time you are trying to assign a value to a variable. Think of it like **"who's the target of the assignment"**
+**LHS** (left-hand-side) look-up occurs every time you are trying to assign a value to a variable. Think of it like **"who's the target of the assignment"**
 
 **RHS** (right-hand-side) look-up occurs every time you are trying to access to the value from a variable. Think of it like **"who's the source of the assignment"**
 
@@ -21,9 +21,10 @@ There are two kinds of look-ups. The LHS (left-hand-side) reference and the RHS 
 Since JavaScript is compiled, its Engine first compiles code before it executes, spliting up statements like ```var a = 2;``` (*VariableDeclaration*) into two separate steps:
 
  1. First, ```var a``` (*Identifier*)  to declare it in that Scope. This is performed at the beginning, before code execution.
- 2. Later, ```a = 2``` (*AssignmentExpression*) to look up the variable (LHS reference) and assign to it if found.
+ 2. Later, ```a = 2``` (*AssignmentExpression*) to look up the variable (LHS reference) and assign to it if found. If not found, the variable is declared in the outer most scope (the global scope).
 
 **RHS example**
+
 LHS and RHS doesn't necessarily mean "left/right side of the = assignment operator". For example ```console.log(a);``` is a RHS reference to the variable ```a```. Here we are looking up to retrieve the value of ```a```so that can be  passed to the ```console.log(...)```.
 
 **LHS && RHS example**
@@ -56,7 +57,10 @@ With global scope and proper namespacing you can develop really cool and well st
 ### Local scope
 Local scope is any scope that is created past the global scope. Typically there is only a global scope and each function defined has its own (nested) local scope.
 
-If I create a function and declare variables in it, these become locally scoped. I.E, these are only available inside that function.
+There are two ways to create local scopes, **block scope** and **function scope**. 
+In fact only function scope is supported by *Ecmascript 5* or lower, being the block scope only supported by *Ecmascript 6* or higher.
+
+If I create a new scope and declare variables in it, these become *locally scoped*. I.E, these are only available inside that scope.
 
 ```javascript 
 // Scope A: Global scope out here
@@ -66,8 +70,8 @@ var myFunction = function () {
 };
 ```
 
-### Block scope
-**New block = New scope**, that's the rule! But only when we are talking about Ecmascript 5 or below.
+#### Block scope
+**New block = New scope**, that's the rule! But only when we are talking about Ecmascript 6 or higher.
 
 Example:
 ```javascript
@@ -87,9 +91,10 @@ var myFunction = function () {
 };
 ```
 
-### Function scope
-**New function = New scope**, that's the rule! But only when we are talking about **Ecmascript 5** or below.
-Only functions create new scopes, they aren’t created by for or ```while``` *loops* or *expression statements* like ```if``` or ```switch```.
+#### Function scope
+**New function = New scope**, that's the rule!
+In **Ecmascript 5** or lower "only" functions create new scopes, they aren’t created by for or ```while``` *loops* or *expression statements* like ```if``` or ```switch```.
+
 Example:
 ```javascript
 // Scope A
@@ -108,9 +113,34 @@ var myFunction = function () {
 };
 ```
 
-Anyway, this rule does not always apply.
+Anyway, this rule does not always apply. That's why I said *"only"* in quotes. 
+Because, even in *Ecmascript 5* there are two ways of creating block scope, these are ```with``` and ```try/catch```.
 
-Since **Ecmascript 6** is not yet support in every browser, we'll stick with **Ecmascript 5**.
+**with**
+```javascript
+var a, x, y;
+var r = 10;
+
+with (Math) {
+  a = PI * r * r;
+  x = r * cos(PI);
+  y = r * sin(PI / 2);
+}
+```
+
+**try/catch**
+```javascript
+try {
+    undefined(); // illegal operation to force an exception!
+}
+catch (err) {
+    console.log( err ); // works!
+}
+
+console.log( err ); // ReferenceError: `err` not found
+```
+
+**Note:** Since **Ecmascript 6** is not yet support in every browser, we'll stick with **Ecmascript 5**.
 
 ### JS namespacing
 Like mentioned before, with proper namespacing and global scope you can build awesome things.
@@ -302,6 +332,8 @@ foo = function() {
     console.log( 2 );
 };
 ```
+
+## Closures
 
 ## References
 [Everything you wanted to know about JavaScript scope](https://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
