@@ -392,13 +392,47 @@ After we execute ```hello()```, we assign the value it returned (our inner ```gr
 
 **```greet()``` still has a reference to that scope, and that reference is called closure.**
 
-### Loops + Closure
-for (var i=1; i<=5; i++) {
-  setTimeout(function timer(){
-    console.log(i);
-  }, i*1000);
-}
+### Modules reviset
+Remember of talking about JavaScript modules? These are the most poweful pattern who leverages the power of closure.
 
+```javascript
+var CoolModule = (function module() {
+  var something = "cool";
+  var another = [1, 2, 3];
+
+  function doSomething() {
+    console.log(something);
+  }
+
+  function doAnother() {
+    console.log(another.join(" ! "));
+  }
+
+  return {
+    doSomething: doSomething,
+    doAnother: doAnother
+  };
+}());
+
+CoolModule.doSomething(); // cool
+CoolModule.doAnother(); // 1 ! 2 ! 3
+```
+
+The most common way of implementing the module pattern is often called "Revealing Module", and it's the variation we present here.
+
+Firstly, ```CoolModule()``` is just a function, but it has to be invoked for there to be a module instance created. Without the execution of the outer function, the creation of the inner scope and the closures would not occur. 
+That's why we defined as a **IIF** (Immediately Invoked Function). But it could be done like the following:
+
+```javascript
+function module() {...};
+var CoolModule = module();
+```
+
+Secondly, the ```CoolModule()``` function returns an object, denoted by the object-literal syntax { key: value, ... }. The object we return has references on it to our inner functions, but not to our inner data variables. We keep those **hidden and private**. It's appropriate to think of this object return value as essentially a **public API** for our module.
+
+This object return value is assigned to the variable ```CoolModule```, and then we can access those property methods on the API, like ```CoolModule.doSomething()```.
+
+Now we can see closures all around our existing code, and we have the ability to recognize and leverage them to our own benefit!
 
 ## References
 [Everything you wanted to know about JavaScript scope](https://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
