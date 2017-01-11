@@ -199,9 +199,9 @@ foo(2); // 4
 
 ```b``` cannot be resolved inside the function ```foo```, but it can be resolved in the Scope surrounding it (in this case, the global).
 
-To visualize the process of nested Scope resolution, I want you to think of this tall building.
+To visualize the process of nested Scope resolution look at this large onion.
 
-<img src="https://github.com/getify/You-Dont-Know-JS/raw/master/scope%20%26%20closures/fig1.png" width="400"/>
+<img src="https://cdn-images-1.medium.com/max/800/1*WIBH8HW9WzoKfBsQPGFHHg.png" width="400"/>
 
 **Example**
 ```javascript
@@ -337,6 +337,68 @@ foo = function() {
 ```
 
 ## Closures
+> Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.
+
+> We have access to variables defined in enclosing function(s) even after the enclosing function which defines these variables has returned.
+
+Let's see the light!
+
+**Code snippet 1:**
+```javascript
+var x = 10;
+
+function foo() {
+  var y = 20; // free variable
+  
+  return function bar() {
+    var z = 15; // free variable
+    return x + y + z;
+  }
+}
+
+var baz = foo();
+baz(); // 45
+```
+
+As you can see, ```bar``` is nested within foo. To help you visualize the nesting, see the diagram below:
+
+<img src="https://cdn-images-1.medium.com/max/800/1*CwxZxltknV8DEEm_Y_ykfA.png" width="600"/>
+
+This scope chain, or chain of environments associated with a function, is saved to the function object at the time of its creation. 
+In other words, it’s defined statically by location within the source code. (This is also known as **"lexical scoping"**).
+
+**Code snippet 2:**
+```javascript
+function hello() {
+    var message = 'Hello, ';
+
+    return function greet(name) {
+      message += name + '!';
+      console.log(message);
+    }
+}
+
+var hey = hello();
+hey('Rodolfo'); // Hello, Rodolfo! -- Whoa, closure was just observed, man.
+```
+
+The function ```greet()``` has scope access to the inner scope of ```hello()```. But then, we take ```greet()```, the function itself, and return it.
+
+After we execute ```hello()```, we assign the value it returned (our inner ```greet()``` function) to a variable called ```hey```, and then we actually invoke ```hey()```, which of course is invoking our inner function ```greet()```, just by a different identifier reference.
+
+```greet()``` is executed, for sure. But in this case, it's executed outside of its declared lexical scope.
+
+```greet()``` has a lexical scope closure over that inner scope of ```hello()```, which keeps that scope alive for ```greet()``` to reference at any later time.
+
+**```greet()``` still has a reference to that scope, and that reference is called closure.**
+
+### Loops + Closure
+for (var i=1; i<=5; i++) {
+  setTimeout(function timer(){
+    console.log(i);
+  }, i*1000);
+}
+
 
 ## References
 [Everything you wanted to know about JavaScript scope](https://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
@@ -344,3 +406,5 @@ foo = function() {
 [You Don't Know JS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures)
 
 [Explaining JavaScript Scope And Closures](https://robertnyman.com/2008/10/09/explaining-javascript-scope-and-closures/)
+
+[Let’s Learn JavaScript Closures](https://medium.freecodecamp.com/lets-learn-javascript-closures-66feb44f6a44#.dl24ka110)
