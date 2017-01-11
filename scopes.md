@@ -427,7 +427,7 @@ CoolModule.doAnother(); // 1 ! 2 ! 3
 The most common way of implementing the module pattern is often called "Revealing Module", and it's the variation we present here.
 
 Firstly, ```CoolModule()``` is just a function, but it has to be invoked for there to be a module instance created. Without the execution of the outer function, the creation of the inner scope and the closures would not occur. 
-That's why we defined as a **IIF** (Immediately Invoked Function). But it could be done like the following:
+That's why we defined as a **IIFE** (Immediately Invoked Function Expression). But it could be done like the following:
 
 ```javascript
 function module() {...};
