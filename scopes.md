@@ -1,3 +1,9 @@
+ * [What it is](scopes#what-it-is)
+ * [Function vs block scope](scopes#local-scope)
+ * [Nested scope](scopes#nested-scope)
+ * [Hoisting](scopes#hoisting)
+ * [Closures](scopes#closures)
+
 # Scopes
 Perhaps one of the most fundamental things you'll need to quickly come to writing bulletproof code and being a better developer.
 
