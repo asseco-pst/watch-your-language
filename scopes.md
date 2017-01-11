@@ -398,7 +398,7 @@ After we execute ```hello()```, we assign the value it returned (our inner ```gr
 
 **```greet()``` still has a reference to that scope, and that reference is called closure.**
 
-### Modules reviset
+### Modules revisited
 Remember of talking about JavaScript modules? These are the most poweful pattern who leverages the power of closure.
 
 ```javascript
