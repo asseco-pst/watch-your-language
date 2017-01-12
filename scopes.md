@@ -330,10 +330,11 @@ foo = function() {
 ```
 
 This snippet is interpreted by the Engine as:
-```
+```javascript
 function foo() {
     console.log( 1 );
 }
+var foo;
 
 foo(); // 1
 
