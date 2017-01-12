@@ -246,7 +246,7 @@ var a;
 console.log(a); // output?
 ```
 
-Some would expect ```undefined```, since the ```var``` a statement comes after the ```a = 2```, and it would seem natural to assume that the variable is re-defined, and thus assigned the default undefined. 
+Some would expect ```undefined```, since the ```var a``` statement comes after the ```a = 2```, and it would seem natural to assume that the variable is re-defined, and thus assigned the default undefined. 
 However, the output will be ```2```.
 
 **Code snippet 2:**
