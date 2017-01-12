@@ -152,7 +152,7 @@ console.log( err ); // ReferenceError: `err` not found
 Like mentioned before, with proper namespacing and global scope you can build awesome things.
 
 Namespacing safes the chance of having unintended collision between two different identifiers with the same name but different intended usages.
-Here's and example of a variable ```calculator``` that is globally available and offers two methods that are only available when using the *"calculator"* namespace.
+Here's an example of a variable ```calculator``` that is globally available and offers two methods that are only available when using the *"calculator"* namespace.
 
 Here the *sum* and *subtract* functions are only available under the *calculator's* scope, keeping the global scope clean.
 
