@@ -367,7 +367,7 @@ var baz = foo();
 baz(); // 45
 ```
 
-As you can see, ```bar``` is nested within foo. To help you visualize the nesting, see the diagram below:
+As you can see, ```bar``` is nested within ```foo```. To help you visualize the nesting, see the diagram below:
 
 <img src="https://cdn-images-1.medium.com/max/800/1*CwxZxltknV8DEEm_Y_ykfA.png" width="600"/>
 
