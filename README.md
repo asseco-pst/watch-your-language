@@ -13,7 +13,7 @@ Each of the following topics should not take longer than 1 hour and must be as m
  * [Hoisting](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/scopes#hoisting)
  * [Closures](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/scopes#closures)
  
-2. this and Object Prototypes
+2. [this and Object Prototypes](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/this-and-object-prototypes)
  * “Let’s settle this”
  * Objects
  * Prototypes
