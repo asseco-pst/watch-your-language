@@ -1,5 +1,5 @@
  * [What is `this`](this-and-object-prototypes#what-is-this)
- * [How to set `this`]()
+ * [How to set `this`](this-and-object-prototypes#how-to-set-this)
  * [What's an object]()
  * [Class vs Objects]()
  * [Prototypes]()
@@ -46,7 +46,61 @@ There are four ways to set the `this` of an object
 
 ## Default Binding
 
+```javascript
+function foo() {
+  console.log( this.a );
+}
+
+var a = 2;
+
+foo();
+```
+- The default binding sets the `this` to the global scope
+- Because `a` is in the global scope the `this.a` will log `2`
+- That means that when the other kind of binds that we will see in just a minute fail the fallback is to the default binding
+- The 1st example of "what is `this`" is also a way to see default binding in action
+
 ## Implicit Binding
+
+```javascript
+function foo() {
+  console.log( this.a );
+}
+
+var obj = {
+  a: 2,
+  foo: foo
+};
+
+var a = 4;
+
+obj.foo();
+```
+
+- Implicit binding is when the `call-site` is different from the window
+- In this case the `this` for `foo()` is the `obj` object
+- For instance when you call `obj.foo()` it will log `2` instead of the global variable `a` which is set to `4`
+- The 2nd example of "what is `this`" is also a way to see implicit binding in action
+
+```javascript
+function foo() {
+  console.log( this.a );
+}
+
+var obj2 = {
+  a: 42,
+  foo: foo
+};
+
+var obj1 = {
+  a: 2,
+  obj2: obj2
+};
+
+obj1.obj2.foo(); // 42
+```
+
+- In this example serves to show that `this` references only the last level of an object
 
 ## Explicit Binding
 
