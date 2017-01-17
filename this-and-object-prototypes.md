@@ -11,7 +11,7 @@
 **^ That** is a mouth full of an explanation, lets break it down and explain what's going on with that definition by showing you some examples.
 
 **Keywords**:
-- `call-site` it's the technical name for "context" which is **the place where the function is being called**
+- `call-site` is the technical name for "context" which is **the place where the function is being called**
 
 ```javascript
 function foo() {
@@ -21,7 +21,7 @@ function foo() {
 foo()
 ```
 
-- `foo()` was called on the `window` so the call it's the same has having `window.foo()`.
+- `foo()` was called on the `window` so the call is the same has having `window.foo()`.
 - `this` by default uses the call-site of the function.
 - In this case, `this` represents the `window`
 
@@ -37,8 +37,8 @@ newObj.foo()
 ```
 
 - Instead of having `window.foo()` we now have `newObj.foo()`
-- `this` is no longer the `window`, now it's the `newObject`
-- `this.a` inside `foo()` should have the same reference as `newObject.a`
+- `this` is no longer the `window`, now it has the `newObject`
+- `this.a` inside `foo()` has the same reference as `newObject.a`
 
 # How to set `this`
 
