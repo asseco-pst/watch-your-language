@@ -6,12 +6,12 @@
 
 # What is `this`
 
-`this` is a binding that is made when a function is invoked and what it contains is based on the call-site where the function is called.
+`this` is a binding that is made when a function is invoked and what it contains is based on the call-site (where the function is called).
 
 **^ That** is a mouth full of an explanation, lets break it down and explain what's going on with that definition by showing you some examples.
 
 **Keywords**:
-- `call-site` it's the technical name for "context" which is **the place were the function is being called**
+- `call-site` it's the technical name for "context" which is **the place where the function is being called**
 
 ```javascript
 function foo() {
@@ -21,8 +21,8 @@ function foo() {
 foo()
 ```
 
-- `foo()` was called on the `window`, it's the same has having `window.foo()`.
-- `this` by default it's based on the call-site of the function.
+- `foo()` was called on the `window` so the call it's the same has having `window.foo()`.
+- `this` by default uses the call-site of the function.
 - In this case, `this` represents the `window`
 
 ```javascript
@@ -38,4 +38,16 @@ newObj.foo()
 
 - Instead of having `window.foo()` we now have `newObj.foo()`
 - `this` is no longer the `window`, now it's the `newObject`
-- `this.a` inside `foo()` it's the same reference as `newObject.a`
+- `this.a` inside `foo()` should have the same reference as `newObject.a`
+
+# How to set `this`
+
+There are four ways to set the `this` of an object
+
+## Default Binding
+
+## Implicit Binding
+
+## Explicit Binding
+
+## new Binding
