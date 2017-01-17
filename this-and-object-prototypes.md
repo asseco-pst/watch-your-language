@@ -6,34 +6,36 @@
 
 # What is `this`
 
-Before the fancy explanation (and the simplest I can think of) let me clear some confusion about what `this` isn't. It isn't a reference to the function itself and it's not based on a function scope (lexical scope). Simple enough, let's move on...oh, examples? I guess I can give you some examples.
+`this` is a binding that is made when a function is invoked and what it contains is based on the call-site where the function is called.
 
-## Itself
+**^ That** is a mouth full of an explanation, lets break it down and explain what's going on with that definition by showing you some examples.
 
-To prove my point in saying that `this` is not itself look at the following scenario
+**Keywords**:
+- `call-site` it's the technical name for "context" which is **the place were the function is being called**
 
 ```javascript
-function foo(num) {
-  console.log('my number ->', num)
-  
-  this.count = num
+function foo() {
+  console.log('what is ->', this)
 }
 
-foo.count = 0
-
-foo(10)
-
-console.log('current state ->', foo.count)
+foo()
 ```
 
-- When we run the code above we notice that foo.count hasn't changed because `this.count` it's not the same as `foo.count`. 
+- `foo()` was called on the `window`, it's the same has having `window.foo()`.
+- `this` by default it's based on the call-site of the function.
+- In this case, `this` represents the `window`
 
-- Since `foo()` was called on the `window`, it's the same has having `window.foo()`. 
+```javascript
+var newObj = {
+  a: '1',
+  foo: function foo() {
+    console.log('what is ->', this.a)
+  }
+}
 
-- That means that at the time the function was called the `call-site` (context) was the `window` so, our `this.count` it's actually the same as `window.count`
+newObj.foo()
+```
 
-Take your time to test out what the window, this and foo are and let it sink in, no rush.
-
-## Scope
-
-`this` ends up being is a binding that is made when a function is invoked and what it contains is based on the call-site where the function is called
+- If we didn't want the `window` we would have to put our function inside an object
+- Instead of having `window.foo()` we now have `newObj.foo()`
+- `this` is no longer the `window`, now it only contains the `newObject` properties, like `this.a`
