@@ -36,6 +36,6 @@ var newObj = {
 newObj.foo()
 ```
 
-- If we didn't want the `window` we would have to put our function inside an object
 - Instead of having `window.foo()` we now have `newObj.foo()`
-- `this` is no longer the `window`, now it only contains the `newObject` properties, like `this.a`
+- `this` is no longer the `window`, now it's the `newObject`
+- `this.a` inside `foo()` it's the same reference as `newObject.a`
