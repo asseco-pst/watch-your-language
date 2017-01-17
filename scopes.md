@@ -386,7 +386,7 @@ function hello() {
 }
 
 var hey = hello();
-hey('Rodolfo'); // Hello, Rodolfo! -- Whoa, closure was just observed, man.
+hey('John'); // Hello, John! -- Whoa, closure was just observed, man.
 ```
 
 The function ```greet()``` has scope access to the inner scope of ```hello()```. But then, we take ```greet()```, the function itself, and return it.
