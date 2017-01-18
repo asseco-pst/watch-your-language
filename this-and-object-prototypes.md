@@ -100,7 +100,7 @@ var obj1 = {
 obj1.obj2.foo(); // 42
 ```
 
-- In this example serves to show that `this` references only the last level of an object
+- This example serves to show that `this` references only the last level of an object
 
 ## Explicit Binding
 
