@@ -200,12 +200,12 @@ console.log( bar.a, bar.b ); // 2 4
 
 # What's an object
 
-## WIP: Available before monday
+##### WIP: Available before monday
 
 # Class vs Object
 
-## WIP: Available before monday
+##### WIP: Available before monday
 
 # Prototypes
 
-## WIP: Available before monday
+##### WIP: Available before monday
