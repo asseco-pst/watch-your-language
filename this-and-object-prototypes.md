@@ -197,3 +197,9 @@ console.log( bar.a, bar.b ); // 2 4
 2. explicit
 3. implicit
 4. default
+
+# What's an object
+
+# Class vs Object
+
+# Prototypes
