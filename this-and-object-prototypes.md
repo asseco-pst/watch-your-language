@@ -1,8 +1,8 @@
  * [What is `this`](this-and-object-prototypes#what-is-this)
  * [How to set `this`](this-and-object-prototypes#how-to-set-this)
- * [What's an object]()
- * [Class vs Objects]()
- * [Prototypes]()
+ * [What's an object](this-and-object-prototypes#whats-an-object)
+ * [Class vs Objects](this-and-object-prototypes#class-vs-object)
+ * [Prototypes](this-and-object-prototypes#prototypes)
 
 # What is `this`
 
