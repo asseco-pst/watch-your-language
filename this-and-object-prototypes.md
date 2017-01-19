@@ -175,11 +175,25 @@ Math.max.apply(null, [1,4,3]) // 4
 ## `new` Binding
 
 ```javascript
+function foo(obj) {
+  this.a = obj.a;
+  this.b = obj.b;
+}
 
+var obj = {
+  a: 2,
+  b: 4,
+}
+
+var bar = new foo(obj);
+console.log( bar.a, bar.b ); // 2 4
 ```
 
-## Order
-1. 
-2. 
-3. 
-4. 
+- `new`can be used in functions and sets the `this`
+- `foo` is basically a constructor
+
+## Priority/Order (higher to lower)
+1. new
+2. explicit
+3. implicit
+4. default
