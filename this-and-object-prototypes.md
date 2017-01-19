@@ -149,7 +149,16 @@ result() // 3
 ### `call`
 
 ```javascript
+function sum() {
+  console.log(this.a + this.b)
+}
 
+var obj = {
+  a: 1,
+  b: 2,
+}
+
+sum.call(obj) //3
 ```
 
 - `call` is used when you want to change the context and call the function at the moment of execution 
@@ -157,9 +166,20 @@ result() // 3
 ### `apply`
 
 ```javascript
-
+Math.max.apply(null, [1,4,3]) // 4
 ```
 
 - `apply` is just like `call` but instead of sending the parameters one by one you can use an array
+- Given the example above, it has the same output has `Math.max(1,4,3)`
 
 ## `new` Binding
+
+```javascript
+
+```
+
+## Order
+1. 
+2. 
+3. 
+4. 
