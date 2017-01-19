@@ -130,17 +130,18 @@ There are 3 properties that can be used and bare in mind that if you don't want 
 ### `bind`
 
 ```javascript
-function sum() { return this.a + this.b }
+function sum() {
+  console.log(this.a + this.b)
+}
 
-var omg = sum.bind({a: 1, b: 2})
+var obj = {
+  a: 1,
+  b: 2,
+}
 
-console.log('eqweq', omg)
+var result = sum.bind(obj)
 
-var sum1 = sum.bind(null, 1);
-var result = sum1(2);
-
-console.log(result) // 3
-
+result() // 3
 ```
 
 - `bind` is used when you want to change the context or send some of the parameters but you don't want to call the function just yet
