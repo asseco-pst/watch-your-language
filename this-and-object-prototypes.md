@@ -119,7 +119,7 @@ var foo = {
 To solve this problem we can use `.call` at the comment those properties are called to change the `this` to what we want, in this case `window`
 
 ```javascript
-foo.native.call(window, 'my message')
+foo.nativeAlert.call(window, 'my message')
 foo.myAlert.call(window, 'my message')
 ```
 
