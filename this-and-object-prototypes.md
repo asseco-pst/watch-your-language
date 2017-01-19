@@ -104,4 +104,61 @@ obj1.obj2.foo(); // 42
 
 ## Explicit Binding
 
-## new Binding
+```javascript
+var foo = {
+  nativeAlert: window.alert,
+  myAlert: function(val) {
+    this.alert(val)
+  }
+}
+```
+
+- If you call `foo.nativeAlert('my message')` it will result in an error because `this` is implicit, instead of referring to the `window` it refers to `foo`
+- Likewise, if you call 'foo.myAlert('my message')' it will also return an error because `alert` is not defined in `foo`
+
+To solve this problem we can use `.call` at the comment those properties are called to change the `this` to what we want, in this case `window`
+
+```javascript
+foo.native.call(window, 'my message')
+foo.myAlert.call(window, 'my message')
+```
+
+- Now you are explicitly telling the function you're calling what context (`this`) you intend for it to have
+
+There are 3 properties that can be used and bare in mind that if you don't want to change the `this` but still want to use any of those 3 properties you just have to send as the first parameter either `null` or `undefined`
+
+### `bind`
+
+```javascript
+function sum() { return this.a + this.b }
+
+var omg = sum.bind({a: 1, b: 2})
+
+console.log('eqweq', omg)
+
+var sum1 = sum.bind(null, 1);
+var result = sum1(2);
+
+console.log(result) // 3
+
+```
+
+- `bind` is used when you want to change the context or send some of the parameters but you don't want to call the function just yet
+
+### `call`
+
+```javascript
+
+```
+
+- `call` is used when you want to change the context and call the function at the moment of execution 
+
+### `apply`
+
+```javascript
+
+```
+
+- `apply` is just like `call` but instead of sending the parameters one by one you can use an array
+
+## `new` Binding
