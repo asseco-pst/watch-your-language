@@ -190,7 +190,7 @@ console.log( bar.a, bar.b ); // 2 4
 ```
 
 - `new`can be used in functions and sets the `this`
-- `foo` is basically a constructor
+- When you use the new for a function you can call it a "constructor call"
 
 ## Priority/Order (higher to lower)
 1. new
@@ -199,6 +199,36 @@ console.log( bar.a, bar.b ); // 2 4
 4. default
 
 # What's an object
+
+## Primitive types
+  - `string`
+  - `number`
+  - `null`
+  - `undefined`
+  - `boolean`
+  - `symbol` <- ES6
+
+- Primitive types cannot be changed
+- Except `null` and `undefined` each of this primitives has an object with base methods, like `String` object for the `string` primitive
+- Anything that isn't a primitive value is considered an `object`
+- Which includes `function` and `array`
+- Object's only accept strings as keys
+
+```javascript
+var obj = { newValue: 3 }
+
+obj["newValue"] = 'new parameter set with literal declaration'
+
+var myVariable = 'newValue'
+
+obj[myVariable] = 'my new value'
+```
+
+## Reference assign
+
+```javascript
+
+```
 
 ##### WIP: Available before monday
 
