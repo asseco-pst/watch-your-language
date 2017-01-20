@@ -125,7 +125,7 @@ foo.myAlert.call(window, 'my message')
 
 - Now you are explicitly telling the function you're calling what context (`this`) you intend for it to have
 
-There are 3 properties that can be used and bare in mind that if you don't want to change the `this` but still want to use any of those 3 properties you just have to send as the first parameter either `null` or `undefined`
+There are 3 properties that can be used for explicit binding. Bare in mind that if you don't want to change the `this` but still want to use any of those 3 properties you just have to send as the first parameter either `null` or `undefined`
 
 ### `bind`
 
@@ -208,11 +208,9 @@ console.log( bar.a, bar.b ); // 2 4
   - `boolean`
   - `symbol` <- ES6
 
-- Primitive types cannot be changed
-- Except `null` and `undefined` each of this primitives has an object with base methods, like `String` object for the `string` primitive
-- Anything that isn't a primitive value is considered an `object`
-- Which includes `function` and `array`
-- Object's only accept strings as keys
+Primitive types cannot be changed except `null` and `undefined` each of this primitives has an object with base methods, like `String` object for the `string` primitive.
+Anything that isn't a primitive value is considered an `object`, which includes `function` and `array`.
+There are some ways to define an object being the most common ones:
 
 ```javascript
 var obj = { newValue: 3 }
