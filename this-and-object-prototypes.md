@@ -217,7 +217,7 @@ console.log( bar.a, bar.b ); // 2 4
 ```javascript
 var obj = { newValue: 3 }
 
-obj["newValue"] = 'new parameter set with literal declaration'
+obj.newValue = 'new parameter set with literal declaration'
 
 var myVariable = 'newValue'
 
