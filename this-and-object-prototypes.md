@@ -1,8 +1,7 @@
  * [What is `this`](this-and-object-prototypes#what-is-this)
  * [How to set `this`](this-and-object-prototypes#how-to-set-this)
  * [What's an object](this-and-object-prototypes#whats-an-object)
- * [Class vs Objects](this-and-object-prototypes#class-vs-object)
- * [Prototypes](this-and-object-prototypes#prototypes)
+ * [Class vs Prototypes](this-and-object-prototypes#class-vs-prototypes)
 
 # What is `this`
 
@@ -225,15 +224,112 @@ obj[myVariable] = 'my new value'
 ## Reference assign
 
 ```javascript
+var foo = {
+  value: 3
+}
 
+var bar = foo;
+
+console.log('before assign', foo.value) // 3
+
+bar.value = 4
+
+console.log('bar after assign', bar.value) // 4
+console.log('foo after assign', foo.value) // 4
 ```
 
-##### WIP: Available before monday
+- When using objects you must be careful not to use "=" to copy an object
+- Object maintain a reference to each other unless you use `Object.assign()` or `Object.create()`
+- `Object.assign()` is normally used to merge various objects
+- `Object.create()` is usually used to assign an already existing object to a new one without maintaining reference like the next example
 
-# Class vs Object
+```javascript
+var foo = {
+  value: 3
+}
 
-##### WIP: Available before monday
+var bar = Object.create(foo)
 
-# Prototypes
+console.log('before asssign', foo.value) // 3
 
-##### WIP: Available before monday
+bar.value = 4
+
+console.log('bar after assign', bar.value) // 4
+console.log('foo after assign', foo.value) // 3
+```
+
+# Class vs Prototypes
+
+Unlike Java or other languages that implement the class/inheritance pattern, JavaScript implements prototypical inheritance.
+
+Prototypes were a design choice made to try and emulate classical classes. 
+
+You can see a function as a constructor (since only functions have the `.prototype` method) responsible for creating new instances while prototype would be any object to serve as a method. 
+
+Beware that prototypes must be assigned using `Object.create()` or `new` so that they don't maintain reference has shown in the example before.
+
+Sounds confusing? That's normal, this was not very well designed in JS which makes for an harder time to explain and to understand, let's make it easier by seeing how you can implement both both `class` and `prototype` in JS
+
+Note: As of `ES6` the `class` keyword was implemented which is just "syntactic sugar", it's the same as saying that it's not the same as Java classes, it's just running `prototypes` "under the hood".
+
+## Class `ES6`
+
+```javascript
+class car {
+  constructor(engine, color) {
+    this.engine = engine;
+    this.color = color;
+  }
+
+  hasProperties() {
+    console.log('Properties -->', this.engine, this.color)
+  }
+}
+
+var myCar = new car('v8', 'blue')
+
+myCar.hasProperties() // Properties --> v8 blue
+```
+
+## Prototype
+
+```javascript
+var car = function(engine, color) {
+  this.engine = engine;
+  this.color = color;
+}
+
+car.prototype.hasProperties = function() {
+  console.log('Properties -->', this.engine, this.color)
+}
+
+var myCar = Object.create(car.prototype)
+
+myCar.constructor('v8', 'blue')
+
+myCar.hasProperties() // Properties --> v8 blue
+```
+
+Has you can see they are the same they just have different ways to be organized.
+
+But there is a less verbose way of using objects and have an even better way to expand the code base by just using objects.
+
+## Composition example
+```javascript
+
+var car = function(engine, color) {
+  var details = {
+    engine: engine,
+    color: color,
+  }
+
+  WIP: Add before monday
+
+}
+```
+
+# References
+
+[Let's settle `this`](https://medium.com/@nashvail/lets-settle-this-part-one-ef36471c7d97#.eeywsza5b)
+
+[You don't know JS - this & object prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/toc.md)
