@@ -310,12 +310,19 @@ myCar.constructor('v8', 'blue')
 myCar.hasProperties() // Properties --> v8 blue
 ```
 
-Has you can see they are the same they just have different ways to be organized.
+Has you can see they are the same, is just different ways to be organize your code base. 
 
-But there is a less verbose way of using objects and have an even better way to expand the code base by just using objects.
+One way you can apply everything about objects and `this` is to use composition without risking polluting the `prototype` chain is to use object composition.
 
 ## Composition example
 ```javascript
+var hasProperties = function (option) {
+  return {
+    hasProperties: function() {
+      console.log('Properties -->', this.engine, this.color) 
+    }
+  }
+}
 
 var car = function(engine, color) {
   var details = {
@@ -323,9 +330,15 @@ var car = function(engine, color) {
     color: color,
   }
 
-  WIP: Add before monday
-
+  return Object.assign( 
+    {}, 
+    details,
+    hasProperties(details))
 }
+
+var myCar = car('v8', 'blue')
+
+myCar.hasProperties() //  Properties --> v8 blue
 ```
 
 # References
@@ -333,3 +346,7 @@ var car = function(engine, color) {
 [Let's settle `this`](https://medium.com/@nashvail/lets-settle-this-part-one-ef36471c7d97#.eeywsza5b)
 
 [You don't know JS - this & object prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/toc.md)
+
+[Prototypes](http://raganwald.com/2013/02/10/prototypes.html)
+
+[Class vs prototype](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9#.rl4lt19sv)
