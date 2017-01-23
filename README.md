@@ -17,8 +17,7 @@ Each of the following topics should not take longer than 1 hour and must be as m
  * [What is `this`](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/this-and-object-prototypes#what-is-this)
  * [How to set `this`](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/this-and-object-prototypes#how-to-set-this)
  * [What's an object](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/this-and-object-prototypes#whats-an-object)
- * [Class vs Objects](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/this-and-object-prototypes#class-vs-object)
- * [Prototypes](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/this-and-object-prototypes#prototypes)
+ * [Class vs Prototypes](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/this-and-object-prototypes#class-vs-prototypes)
             	
 3. [Asynchronous programming part I](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async)
  * Sync vs Async
