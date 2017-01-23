@@ -190,6 +190,7 @@ console.log( bar.a, bar.b ); // 2 4
 
 - `new`can be used in functions and sets the `this`
 - When you use the new for a function you can call it a "constructor call"
+- It can also be used to create new objects although `Object.create()` is preferred
 
 ## Priority/Order (higher to lower)
 1. new
@@ -207,7 +208,7 @@ console.log( bar.a, bar.b ); // 2 4
   - `boolean`
   - `symbol` <- ES6
 
-Primitive types cannot be changed except `null` and `undefined` each of this primitives has an object with base methods, like `String` object for the `string` primitive.
+Except `null` and `undefined` each of this primitives has an object with base methods, like `String` object for the `string` primitive.
 Anything that isn't a primitive value is considered an `object`, which includes `function` and `array`.
 There are some ways to define an object being the most common ones:
 
@@ -260,15 +261,15 @@ console.log('foo after assign', foo.value) // 3
 
 # Class vs Prototypes
 
-Unlike Java or other languages that implement the class/inheritance pattern, JavaScript implements prototypical inheritance.
+Unlike Java or other languages that implement the class/inheritance pattern, JavaScript implements prototypal inheritance.
 
 Prototypes were a design choice made to try and emulate classical classes. 
 
 You can see a function as a constructor (since only functions have the `.prototype` method) responsible for creating new instances while prototype would be any object to serve as a method. 
 
-Beware that prototypes must be assigned using `Object.create()` or `new` so that they don't maintain reference has shown in the example before.
+Beware that prototypes must be assigned using `Object.create()` or `new` so that they don't maintain reference as shown in the example before.
 
-Sounds confusing? That's normal, this was not very well designed in JS which makes for an harder time to explain and to understand, let's make it easier by seeing how you can implement both both `class` and `prototype` in JS
+Sounds confusing? That's normal, this was not very well designed in JS which makes for an harder time to explain and to understand, let's make it easier by seeing how you can implement both `class` and `prototype` in JS
 
 Note: As of `ES6` the `class` keyword was implemented which is just "syntactic sugar", it's the same as saying that it's not the same as Java classes, it's just running `prototypes` "under the hood".
 
@@ -310,7 +311,7 @@ myCar.constructor('v8', 'blue')
 myCar.hasProperties() // Properties --> v8 blue
 ```
 
-Has you can see they are the same, is just different ways to be organize your code base. 
+As you can see they are the same, is just different ways to be organize your code base. 
 
 One way you can apply everything about objects and `this` is to use composition without risking polluting the `prototype` chain is to use object composition.
 
