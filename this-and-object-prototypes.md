@@ -174,7 +174,7 @@ Math.max.apply(null, [1,4,3]) // 4
 ## `new` Binding
 
 ```javascript
-function foo(obj) {
+function Foo(obj) {
   this.a = obj.a;
   this.b = obj.b;
 }
@@ -184,7 +184,7 @@ var obj = {
   b: 4,
 }
 
-var bar = new foo(obj);
+var bar = new Foo(obj);
 console.log( bar.a, bar.b ); // 2 4
 ```
 
