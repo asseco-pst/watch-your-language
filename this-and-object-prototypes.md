@@ -113,7 +113,7 @@ var foo = {
 ```
 
 - If you call `foo.nativeAlert('my message')` it will result in an error because `this` is implicit, instead of referring to the `window` it refers to `foo`
-- Likewise, if you call 'foo.myAlert('my message')' it will also return an error because `alert` is not defined in `foo`
+- Likewise, if you call `foo.myAlert('my message')` it will also return an error because `alert` is not defined in `foo`
 
 To solve this problem we can use `.call` at the comment those properties are called to change the `this` to what we want, in this case `window`
 
