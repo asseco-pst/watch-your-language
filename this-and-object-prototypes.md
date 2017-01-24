@@ -317,12 +317,8 @@ One way you can apply everything about objects and `this` is to use composition 
 
 ## Composition example
 ```javascript
-var hasProperties = function (option) {
-  return {
-    hasProperties: function() {
-      console.log('Properties -->', this.engine, this.color) 
-    }
-  }
+var hasProperties = function () {
+  console.log('Properties -->', this.engine, this.color) 
 }
 
 var car = function(engine, color) {
@@ -334,7 +330,7 @@ var car = function(engine, color) {
   return Object.assign( 
     {}, 
     details,
-    hasProperties(details))
+    { hasProperties : hasProperties })
 }
 
 var myCar = car('v8', 'blue')
