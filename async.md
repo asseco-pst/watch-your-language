@@ -5,7 +5,7 @@ The relationship between these two is at the heart of asynchronous programming.
 
 
 ## A Program in Chunks
-function = Chunk
+> function = chunk
 
 ```javascript
 // ajax(..) is some arbitrary Ajax function given by a library
