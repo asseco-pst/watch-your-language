@@ -88,31 +88,53 @@ while (queue.waitForMessage()) {
 
 "There’s a process that constantly checks whether the call stack is empty, and whenever it’s empty, it checks if the event queue has any functions waiting to be invoked. If it does, then the first function in the queue gets invoked and moved over into the call stack. If the event queue is empty, then this monitoring process just keeps on running indefinitely. And voila — what I just described is the infamous Event Loop!" *- [What is the JavaScript Event Loop?](http://altitudelabs.com/blog/what-is-the-javascript-event-loop/)*
 
+## Is JS single-threaded?
+JS is a single-threaded, non-blocking assynchronous concurrent language. 
+
+While this is not false, it isn't quite true too. If you consider JS by itself, then YES, only one thing happens at the time in the JS thread.
+It is in the callstack where the magic happens.
+
+Although, in your JS environment you have more than just the JS runtime.
+You have the WebAPIs that process your asynchronous code in parallel in a separated thread. And voila, you have multiple threads executing your code.
+
+Let's see this, first in the big picture and then in detail.
+
 ## The big picture
+
+In the big picture, the JS environment is composed by:
+* The JS runtime, composed by:
+	* A heap, that is where memory allocations happen
+	* A call stack where our program actually executes
+* The event loop which decides when a new new code chunk must go to the stack
+* The WebAPIs like the DOM, the Ajax requests, timers... Things that are handled out of the JS single thread
+* A callback queue with all the messages resulting from our WebAPI processes
+
 <img src="/uploads/1e664b873ed845bbbefb5018ff38c081/javascript_event_loop.png" width="400"/>
+
+Now in detail.
 
 ## Call stack
 <img src="/uploads/5c55fa14b4b00d40c05054a4907677c9/www.GIFCreator.me_D3KgvJ.gif" width="400"/>
 
-## blowing the stack
+## Blowing the stack
 <img src="/uploads/f03eff5ca5cd059d801e84379249d125/www.GIFCreator.me_CF6hUR.gif" width="400"/>
 
-## asynchronous I
+## Asynchronous I
 <img src="/uploads/78f0030a4e830d6ab7cf3910dd01f9a1/www.GIFCreator.me_mtIJtE.gif" width="400"/>
 
-## asynchronous II
+## Asynchronous II
 <img src="/uploads/12c7743570fd88e8c95ed26bfe7d08ac/www.GIFCreator.me_UU3q43.gif" width="400"/>
 
-## asynchronous III
+## Asynchronous III
 <img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
 
-## asynchronous IV
+## Asynchronous IV
 <img src="/uploads/21146bab33da66bb663417b92317ffe5/www.GIFCreator.me_448cr9.gif" width="400"/>
 
-## asynchronous V
+## Asynchronous V
 <img src="/uploads/44cbb171d94f0c91cfece948527c392d/www.GIFCreator.me_FsVqLX.gif" width="400"/>
 
-## asynchronous VI
+## Asynchronous VI
 <img src="/uploads/35ea0909069d4c397fa32011b75e2201/www.GIFCreator.me_FsVqLX.gif" width="400"/>
 
 ## Render Queue I
