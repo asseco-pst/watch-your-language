@@ -105,19 +105,39 @@ In the big picture, the JS environment is composed by:
 * The JS runtime, composed by:
 	* A heap, that is where memory allocations happen
 	* A call stack where our program actually executes
-* The event loop which decides when a new new code chunk must go to the stack
+* The event loop which decides when a new code chunk must go to the stack
 * The WebAPIs like the DOM, the Ajax requests, timers... Things that are handled out of the JS single thread
-* A callback queue with all the messages resulting from our WebAPI processes
+* A callback queue with all the messages resulting from our WebAPI processing
 
 <img src="/uploads/1e664b873ed845bbbefb5018ff38c081/javascript_event_loop.png" width="400"/>
 
 Now in detail.
 
 ## Call stack
+
+The callback is pretty straightforward, **last in, first out**.
+
 <img src="/uploads/5c55fa14b4b00d40c05054a4907677c9/www.GIFCreator.me_D3KgvJ.gif" width="400"/>
 
+In the above image we have an example of some synchronous code being executed.
+
+1. First we have the `main()` going into the stack. It is just the first thing that goes into the stack when your application starts executing.
+2. We call `printSquare()`, which goes into the stack.
+3. `printSquare()` calls `square()`, which goes into the stack.
+4. `square()` calls `multiply()`, which goes into the stack.
+5. `multiply()` returns, jumping out of the stack.
+6. `square()` returns, jumping out of the stack.
+7. `printSquare()` calls `console.log()`, which goes into the stack.
+8. `printSquare()` returns, jumping out of the stack.
+9. Code execution finishes and the event loop stays continuously waiting for new events.
+
 ## Blowing the stack
+
+We use to hear "Don't blow the stack", "Whatch out, there's blocking operations there." What does this actually mean? We use to know how to solve these, but do we actually understand why er're doing it?
+
 <img src="/uploads/f03eff5ca5cd059d801e84379249d125/www.GIFCreator.me_CF6hUR.gif" width="400"/>
+
+For example, if we have a function `foo` that is recursive and has not stop condition, we'll have what is represented in the image above.
 
 ## Asynchronous I
 <img src="/uploads/78f0030a4e830d6ab7cf3910dd01f9a1/www.GIFCreator.me_mtIJtE.gif" width="400"/>
