@@ -77,14 +77,19 @@ The JS engine runs inside a hosting environment, which is for most developers th
 
 # Event Loop
 
+## call stack
 ![www.GIFCreator.me_D3KgvJ](/uploads/5c55fa14b4b00d40c05054a4907677c9/www.GIFCreator.me_D3KgvJ.gif)
 
+## blowing the stack
 ![www.GIFCreator.me_CF6hUR](/uploads/f03eff5ca5cd059d801e84379249d125/www.GIFCreator.me_CF6hUR.gif)
 
+## asynchronous I
 ![www.GIFCreator.me_mtIJtE](/uploads/78f0030a4e830d6ab7cf3910dd01f9a1/www.GIFCreator.me_mtIJtE.gif)
 
-![www.GIFCreator.me_mtIJtE](/uploads/65e534c15c368ef410f31aec22a55e0a/www.GIFCreator.me_mtIJtE.gif)
+## asynchronous II
+![www.GIFCreator.me_UU3q43](/uploads/12c7743570fd88e8c95ed26bfe7d08ac/www.GIFCreator.me_UU3q43.gif)
 
+## asynchronous IV
 ![www.GIFCreator.me_UU3q43](/uploads/b8c367306031ed2814357f59a540f783/www.GIFCreator.me_UU3q43.gif)
 
 ![www.GIFCreator.me_vjHNc0](/uploads/fbf9a89f4a079306c5881aafebeb31e1/www.GIFCreator.me_vjHNc0.gif)
