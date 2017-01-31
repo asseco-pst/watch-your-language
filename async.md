@@ -92,34 +92,34 @@ while (queue.waitForMessage()) {
 <img src="/uploads/1e664b873ed845bbbefb5018ff38c081/javascript_event_loop.png" width="400"/>
 
 ## Call stack
-<img src="/uploads/5c55fa14b4b00d40c05054a4907677c9/www.GIFCreator.me_D3KgvJ.gif" width="600"/>
+<img src="/uploads/5c55fa14b4b00d40c05054a4907677c9/www.GIFCreator.me_D3KgvJ.gif" width="400"/>
 
 ## blowing the stack
-<img src="/uploads/f03eff5ca5cd059d801e84379249d125/www.GIFCreator.me_CF6hUR.gif" width="600"/>
+<img src="/uploads/f03eff5ca5cd059d801e84379249d125/www.GIFCreator.me_CF6hUR.gif" width="400"/>
 
 ## asynchronous I
-<img src="/uploads/78f0030a4e830d6ab7cf3910dd01f9a1/www.GIFCreator.me_mtIJtE.gif" width="600"/>
+<img src="/uploads/78f0030a4e830d6ab7cf3910dd01f9a1/www.GIFCreator.me_mtIJtE.gif" width="400"/>
 
 ## asynchronous II
-<img src="/uploads/12c7743570fd88e8c95ed26bfe7d08ac/www.GIFCreator.me_UU3q43.gif" width="600"/>
+<img src="/uploads/12c7743570fd88e8c95ed26bfe7d08ac/www.GIFCreator.me_UU3q43.gif" width="400"/>
 
 ## asynchronous III
-<img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="600"/>
+<img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
 
 ## asynchronous IV
-<img src="/uploads/21146bab33da66bb663417b92317ffe5/www.GIFCreator.me_448cr9.gif" width="600"/>
+<img src="/uploads/21146bab33da66bb663417b92317ffe5/www.GIFCreator.me_448cr9.gif" width="400"/>
 
 ## asynchronous V
-<img src="/uploads/44cbb171d94f0c91cfece948527c392d/www.GIFCreator.me_FsVqLX.gif" width="600"/>
+<img src="/uploads/44cbb171d94f0c91cfece948527c392d/www.GIFCreator.me_FsVqLX.gif" width="400"/>
 
 ## asynchronous VI
-<img src="/uploads/35ea0909069d4c397fa32011b75e2201/www.GIFCreator.me_FsVqLX.gif" width="600"/>
+<img src="/uploads/35ea0909069d4c397fa32011b75e2201/www.GIFCreator.me_FsVqLX.gif" width="400"/>
 
 ## Render Queue I
-<img src="/uploads/6e1989f87e8e81dbac522170d15ecad6/www.GIFCreator.me_xcjwOq.gif" width="600"/>
+<img src="/uploads/6e1989f87e8e81dbac522170d15ecad6/www.GIFCreator.me_xcjwOq.gif" width="400"/>
 
 ## Render Queue II
-<img src="/uploads/59be802a9a473c34c5c1ae2bb6b0467c/www.GIFCreator.me_xxkOsW.gif" width="600"/>
+<img src="/uploads/59be802a9a473c34c5c1ae2bb6b0467c/www.GIFCreator.me_xxkOsW.gif" width="400"/>
 
 
 # References
