@@ -89,13 +89,13 @@ The JS engine runs inside a hosting environment, which is for most developers th
 ## asynchronous II
 ![www.GIFCreator.me_UU3q43](/uploads/12c7743570fd88e8c95ed26bfe7d08ac/www.GIFCreator.me_UU3q43.gif)
 
+## asynchronous III
+![www.GIFCreator.me_vjHNc0](/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif)
+
 ## asynchronous IV
-![www.GIFCreator.me_UU3q43](/uploads/b8c367306031ed2814357f59a540f783/www.GIFCreator.me_UU3q43.gif)
-
-![www.GIFCreator.me_vjHNc0](/uploads/fbf9a89f4a079306c5881aafebeb31e1/www.GIFCreator.me_vjHNc0.gif)
-
 ![www.GIFCreator.me_448cr9](/uploads/21146bab33da66bb663417b92317ffe5/www.GIFCreator.me_448cr9.gif)
 
+## asynchronous V
 ![www.GIFCreator.me_FsVqLX](/uploads/44cbb171d94f0c91cfece948527c392d/www.GIFCreator.me_FsVqLX.gif)
 
 ## Render Queue I
