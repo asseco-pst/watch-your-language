@@ -89,37 +89,37 @@ while (queue.waitForMessage()) {
 "There’s a process that constantly checks whether the call stack is empty, and whenever it’s empty, it checks if the event queue has any functions waiting to be invoked. If it does, then the first function in the queue gets invoked and moved over into the call stack. If the event queue is empty, then this monitoring process just keeps on running indefinitely. And voila — what I just described is the infamous Event Loop!" *- [What is the JavaScript Event Loop?](http://altitudelabs.com/blog/what-is-the-javascript-event-loop/)*
 
 ## The big picture
-![javascript_event_loop](/uploads/1e664b873ed845bbbefb5018ff38c081/javascript_event_loop.png)
+<img source="/uploads/1e664b873ed845bbbefb5018ff38c081/javascript_event_loop.png" width="600"/>
 
 ## Call stack
-![www.GIFCreator.me_D3KgvJ](/uploads/5c55fa14b4b00d40c05054a4907677c9/www.GIFCreator.me_D3KgvJ.gif)
+<img source="/uploads/5c55fa14b4b00d40c05054a4907677c9/www.GIFCreator.me_D3KgvJ.gif" width="600"/>
 
 ## blowing the stack
-![www.GIFCreator.me_CF6hUR](/uploads/f03eff5ca5cd059d801e84379249d125/www.GIFCreator.me_CF6hUR.gif)
+<img source="/uploads/f03eff5ca5cd059d801e84379249d125/www.GIFCreator.me_CF6hUR.gif" width="600"/>
 
 ## asynchronous I
-![www.GIFCreator.me_mtIJtE](/uploads/78f0030a4e830d6ab7cf3910dd01f9a1/www.GIFCreator.me_mtIJtE.gif)
+<img source="/uploads/78f0030a4e830d6ab7cf3910dd01f9a1/www.GIFCreator.me_mtIJtE.gif" width="600"/>
 
 ## asynchronous II
-![www.GIFCreator.me_UU3q43](/uploads/12c7743570fd88e8c95ed26bfe7d08ac/www.GIFCreator.me_UU3q43.gif)
+<img source="/uploads/12c7743570fd88e8c95ed26bfe7d08ac/www.GIFCreator.me_UU3q43.gif" width="600"/>
 
 ## asynchronous III
-![www.GIFCreator.me_vjHNc0](/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif)
+<img source="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="600"/>
 
 ## asynchronous IV
-![www.GIFCreator.me_448cr9](/uploads/21146bab33da66bb663417b92317ffe5/www.GIFCreator.me_448cr9.gif)
+<img source="/uploads/21146bab33da66bb663417b92317ffe5/www.GIFCreator.me_448cr9.gif" width="600"/>
 
 ## asynchronous V
-![www.GIFCreator.me_FsVqLX](/uploads/44cbb171d94f0c91cfece948527c392d/www.GIFCreator.me_FsVqLX.gif)
+<img source="/uploads/44cbb171d94f0c91cfece948527c392d/www.GIFCreator.me_FsVqLX.gif" width="600"/>
 
 ## asynchronous VI
-![www.GIFCreator.me_FsVqLX](/uploads/35ea0909069d4c397fa32011b75e2201/www.GIFCreator.me_FsVqLX.gif)
+<img source="/uploads/35ea0909069d4c397fa32011b75e2201/www.GIFCreator.me_FsVqLX.gif" width="600"/>
 
 ## Render Queue I
-![www.GIFCreator.me_xcjwOq](/uploads/6e1989f87e8e81dbac522170d15ecad6/www.GIFCreator.me_xcjwOq.gif)
+<img source="/uploads/6e1989f87e8e81dbac522170d15ecad6/www.GIFCreator.me_xcjwOq.gif" width="600"/>
 
 ## Render Queue II
-![www.GIFCreator.me_xxkOsW](/uploads/59be802a9a473c34c5c1ae2bb6b0467c/www.GIFCreator.me_xxkOsW.gif)
+<img source="/uploads/59be802a9a473c34c5c1ae2bb6b0467c/www.GIFCreator.me_xxkOsW.gif" width="600"/>
 
 
 # References
