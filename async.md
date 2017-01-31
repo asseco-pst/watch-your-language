@@ -9,9 +9,9 @@ Consider:
 
 ```javascript
 // ajax(..) is some arbitrary Ajax function given by a library
-var data = ajax( "http://some.url.1" );
+var data = ajax('http://some.url.1');
 
-console.log( data );
+console.log(data);
 // Oops! `data` generally won't have the Ajax results
 ```
 
@@ -73,6 +73,8 @@ The JS engine itself has never done anything more than execute a single chunk of
 
 "**Asked to.**" By whom? That's the important part!
 
-The JS engine runs inside a hosting environment, which is for most developers the typical web browser, that has a mechanism in them that handles executing multiple chunks of your program over time and is called **"Event Loop"**.
+The JS engine runs inside a hosting environment, which is for most developers the typical web browser, that has handling the execution of multiple chunks of your program over time and it is called **"Event Loop"**.
 
-**Event Loop**  
+# Event Loop
+
+<a href="http://freegifmaker.me/images/2abLC/"><img src="http://i.freegifmaker.me/1/4/8/5/8/7/1485874829953580.gif?1485874842" alt="gifs website"/></a><br/><a href="http://www.freegifmaker.me/">Stack 01<a/>
