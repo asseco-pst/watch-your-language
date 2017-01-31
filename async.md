@@ -67,10 +67,12 @@ console.log('Foo');
 > function = chunk
 
 
-Any time you wrap a portion of code into a function and specify that it should be executed in response to some event (timer, mouse click, Ajax response, etc.), you are creating a *later* chunk of your code, and thus introducing **asynchrony** to your program.
+Any time you define a function and specify that it should be executed in response to some event (ex. Ajax response), you are creating a *later* chunk of your code, and thus introducing **asynchrony** to your program.
 
 The JS engine itself has never done anything more than execute a single chunk of your program at any given moment, when **asked to**.
 
 "**Asked to.**" By whom? That's the important part!
 
-The JS engine runs inside a hosting environment, which is for most developers the typical web browser.
+The JS engine runs inside a hosting environment, which is for most developers the typical web browser, that has a mechanism in them that handles executing multiple chunks of your program over time and is called **"Event Loop"**.
+
+**Event Loop**  
