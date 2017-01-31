@@ -78,3 +78,5 @@ The JS engine runs inside a hosting environment, which is for most developers th
 # Event Loop
 
 ![www.GIFCreator.me_D3KgvJ](/uploads/5c55fa14b4b00d40c05054a4907677c9/www.GIFCreator.me_D3KgvJ.gif)
+
+![www.GIFCreator.me_C70CpU](/uploads/3ebc76b5624199b8913ca5b565045682/www.GIFCreator.me_C70CpU.gif)
