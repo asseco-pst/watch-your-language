@@ -88,6 +88,9 @@ while (queue.waitForMessage()) {
 
 "There’s a process that constantly checks whether the call stack is empty, and whenever it’s empty, it checks if the event queue has any functions waiting to be invoked. If it does, then the first function in the queue gets invoked and moved over into the call stack. If the event queue is empty, then this monitoring process just keeps on running indefinitely. And voila — what I just described is the infamous Event Loop!" *- [What is the JavaScript Event Loop?](http://altitudelabs.com/blog/what-is-the-javascript-event-loop/)*
 
+## The big picture
+![javascript_event_loop](/uploads/1e664b873ed845bbbefb5018ff38c081/javascript_event_loop.png)
+
 ## Call stack
 ![www.GIFCreator.me_D3KgvJ](/uploads/5c55fa14b4b00d40c05054a4907677c9/www.GIFCreator.me_D3KgvJ.gif)
 
