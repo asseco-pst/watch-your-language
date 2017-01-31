@@ -77,7 +77,19 @@ The JS engine runs inside a hosting environment, which is for most developers th
 
 # Event Loop
 
-## call stack
+**Event Loop** is a JavaScript concurrency model that is  is quite different from models in other languages like C and Java.
+
+The event loop got its name because of how it's usually implemented, which usually resembles:
+```javascript
+while (queue.waitForMessage()) {
+  queue.processNextMessage();
+}
+```
+
+Event loop 
+"There’s a process that constantly checks whether the call stack is empty, and whenever it’s empty, it checks if the event queue has any functions waiting to be invoked. If it does, then the first function in the queue gets invoked and moved over into the call stack. If the event queue is empty, then this monitoring process just keeps on running indefinitely. And voila — what I just described is the infamous Event Loop!" *- [What is the JavaScript Event Loop?](http://altitudelabs.com/blog/what-is-the-javascript-event-loop/)*
+
+## Call stack
 ![www.GIFCreator.me_D3KgvJ](/uploads/5c55fa14b4b00d40c05054a4907677c9/www.GIFCreator.me_D3KgvJ.gif)
 
 ## blowing the stack
@@ -108,3 +120,11 @@ The JS engine runs inside a hosting environment, which is for most developers th
 ![www.GIFCreator.me_xxkOsW](/uploads/59be802a9a473c34c5c1ae2bb6b0467c/www.GIFCreator.me_xxkOsW.gif)
 
 
+# References
+[What the heck is the event loop anyway?](http://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html)
+
+[YDKJS - Asynchrony: Now & Later](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch1.md#chapter-1-asynchrony-now--later)
+
+[What is the JavaScript Event Loop?](http://altitudelabs.com/blog/what-is-the-javascript-event-loop/)
+
+[Concurrency model and Event Loop](https://developer.mozilla.org/pt-PT/docs/Web/JavaScript/EventLoop)
