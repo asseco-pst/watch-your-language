@@ -215,16 +215,26 @@ In the big picture, the JS environment is composed by:
 * The WebAPIs like the DOM, the Ajax requests, timers... Things that are handled out of the JS single thread
 * A callback queue with all the messages resulting from our WebAPI processing
 
-<img src="/uploads/1e664b873ed845bbbefb5018ff38c081/javascript_event_loop.png" width="400"/>
-
-Now in detail.
-
-<br>
-<img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
-
 ## Concurrency and the Event Loop
 
+Now that we have the big picture in our minds let's analyse the asynchronous example given before.
+
+<br>
 <img src="/uploads/12c7743570fd88e8c95ed26bfe7d08ac/www.GIFCreator.me_UU3q43.gif" width="400"/>
+
+1. First `console.log('hi')` goes into the stack and returns
+2. Then the `setTimeout(fn, 5000)` goes into the stack and **redirects** to the WebAPI
+3. The WebAPI processes the `timer` and sends the callback function back to the callback/task queue when the timer ends
+4. In parallel, the `console.log('JSConfEU')` goes into the stack and returns
+5. Finally, when the stack is empty, the callback function can go into the stack
+
+And we're done.
+
+### **This is the Event Loop**! 
+**It has a very tiny am simple task. It looks at the callback queue and at the callstack, if the stack is empty it takes the first thing in the queue an pushes it on the stack**
+
+
+<img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
 
 As you can see, when you have a timer callback this is handled by the WebAPI. No mather if your timeout is `0` or higher, it will always have the same behaviour. 
 1. First enters into the stack
