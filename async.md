@@ -180,7 +180,7 @@ you rock
 
 Let's see how it behaves with regards to the call stack.
 
-<img src="/uploads/ff1e042365b8553a8a0180341a213698/www.GIFCreator.me_0hw8rn.gif" width="400"/>
+<img src="/uploads/9f562a2bed2934707718924f49bd8578/www.GIFCreator.me_zYL6Cm.gif" width="400"/>
 
 In this example we have some asynchronous code, which means, it isn't blocking.
 
