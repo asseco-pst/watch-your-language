@@ -115,7 +115,7 @@ Now in detail.
 
 ## Call stack
 
-The callback is pretty straightforward, **last in, first out**.
+The call stack is pretty straightforward, **last in, first out**.
 
 <img src="/uploads/5c55fa14b4b00d40c05054a4907677c9/www.GIFCreator.me_D3KgvJ.gif" width="400"/>
 
@@ -139,17 +139,17 @@ We use to hear "Don't blow the stack!". What does this actually mean? We usually
 
 For example, if we have a function `foo` that is recursive and has not stop condition, we'll have what is represented in the image above.
 
-We'll have new operations entering into the stack continuously and never jumping out of it. Hiting the maximum call stack size.
+We'll have new tasks entering into the stack continuously and never jumping out of it. Hiting the maximum call stack size.
 
 <br>
 
 ## Blocking operations
 
-You also must hear a lot "Whatch out, there's blocking operations there, use a callback or a promise intead".
+You also must hear a lot "Whatch out, there's blocking operations there, use a callback or a promise instead".
 
 This is really important and it is in fact one of the most powerful techinques to achieve good performance.
 
-Let's the next example where we have multiple synchronous Ajax requests. I know, I know, they should be asynchronous but these are just synchronous!
+Let's see the next example where we have multiple synchronous Ajax requests. <br>I know, I know, they should be asynchronous but these are just synchronous!
 
 <img src="/uploads/78f0030a4e830d6ab7cf3910dd01f9a1/www.GIFCreator.me_mtIJtE.gif" width="400"/>
 
@@ -157,7 +157,7 @@ Let's the next example where we have multiple synchronous Ajax requests. I know,
 2. We call `"//bar.com"` and then we wait... and then it returns
 3. We call `"//qux.com"` and then we wait and wait and wait and wait... This can even never end
 
-Since they are synchronous other tasks cannot enter into the stack because it isn't empty.
+Since they are synchronous, other tasks cannot enter into the stack because it isn't empty.
 And remeber **"a new task can only get into the stack when the stack is empty"**.
 
 And why is this a problem?
@@ -168,7 +168,7 @@ Because we are in the browser.<br>The browser gets stuck and you can't do anythi
 
 ## Asynchronous I
 
-The solutions for the problem is using asynchronous callbacksm, the `later` code!
+The solutions for the problem is using asynchronous callbacks, the `later` code!
 
 A simple example would be:
 
