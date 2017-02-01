@@ -75,7 +75,7 @@ The JS engine itself has never done anything more than execute a single chunk of
 
 The JS engine runs inside a hosting environment, which is for most developers the typical web browser, that has handling the execution of multiple chunks of your program over time and it is called **"Event Loop"**.
 
-# Event Loop
+# Concurrency and the Event Loop
 
 **Event Loop** is a JavaScript concurrency model that is  is quite different from models in other languages like C and Java.
 
