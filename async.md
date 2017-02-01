@@ -139,6 +139,8 @@ We use to hear "Don't blow the stack!". What does this actually mean? We usually
 
 For example, if we have a function `foo` that is recursive and has not stop condition, we'll have what is represented in the image above.
 
+<br>
+
 ## Blocking operations
 
 You also must hear a lot "Whatch out, there's blocking operations there, use a callback or a promise intead".
@@ -160,23 +162,37 @@ And why is this a problem?
 
 Because we are in the browser.<br>The browser gets stuck and you can't do anything while there's operations peding on the call stack.<br>We'll see why in a moment.
 
+<br>
+
 ## Asynchronous II
 <img src="/uploads/12c7743570fd88e8c95ed26bfe7d08ac/www.GIFCreator.me_UU3q43.gif" width="400"/>
+
+<br>
 
 ## Asynchronous III
 <img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
 
+<br>
+
 ## Asynchronous IV
 <img src="/uploads/21146bab33da66bb663417b92317ffe5/www.GIFCreator.me_448cr9.gif" width="400"/>
+
+<br>
 
 ## Asynchronous V
 <img src="/uploads/44cbb171d94f0c91cfece948527c392d/www.GIFCreator.me_FsVqLX.gif" width="400"/>
 
+<br>
+
 ## Asynchronous VI
 <img src="/uploads/35ea0909069d4c397fa32011b75e2201/www.GIFCreator.me_FsVqLX.gif" width="400"/>
 
+<br>
+
 ## Render Queue I
 <img src="/uploads/6e1989f87e8e81dbac522170d15ecad6/www.GIFCreator.me_xcjwOq.gif" width="400"/>
+
+<br>
 
 ## Render Queue II
 <img src="/uploads/59be802a9a473c34c5c1ae2bb6b0467c/www.GIFCreator.me_xxkOsW.gif" width="400"/>
