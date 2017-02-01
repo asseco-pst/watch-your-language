@@ -153,11 +153,11 @@ Let's the next example where we have multiple synchronous Ajax requests. I know,
 
 <img src="/uploads/78f0030a4e830d6ab7cf3910dd01f9a1/www.GIFCreator.me_mtIJtE.gif" width="400"/>
 
-1. We call `"//foo.com"` and then we wait
-2. We call `"//bar.com"` and then we wait
+1. We call `"//foo.com"` and then we wait... and then it returns
+2. We call `"//bar.com"` and then we wait... and then it returns
 3. We call `"//qux.com"` and then we wait and wait and wait and wait... This can even never end
 
-Since they are synchronous other operations cannot enter into the stack because it isn't empty.
+Since they are synchronous other tasks cannot enter into the stack because it isn't empty.
 And remeber **"a new task can only get into the stack when the stack is empty"**.
 
 And why is this a problem?
@@ -166,7 +166,7 @@ Because we are in the browser.<br>The browser gets stuck and you can't do anythi
 
 <br>
 
-## Asynchronous II
+## Asynchronous I
 
 The solutions for the problem is using asynchronous callbacksm, the `later` code!
 
@@ -208,22 +208,22 @@ As you can see, when you have a timer callback this is handled by the WebAPI. No
 
 <br>
 
-## Asynchronous III
+## Asynchronous II
 <img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
 
 <br>
 
-## Asynchronous IV
+## Asynchronous III
 <img src="/uploads/21146bab33da66bb663417b92317ffe5/www.GIFCreator.me_448cr9.gif" width="400"/>
 
 <br>
 
-## Asynchronous V
+## Asynchronous IV
 <img src="/uploads/44cbb171d94f0c91cfece948527c392d/www.GIFCreator.me_FsVqLX.gif" width="400"/>
 
 <br>
 
-## Asynchronous VI
+## Asynchronous V
 <img src="/uploads/35ea0909069d4c397fa32011b75e2201/www.GIFCreator.me_FsVqLX.gif" width="400"/>
 
 <br>
