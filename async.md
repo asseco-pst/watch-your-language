@@ -16,7 +16,7 @@ console.log(data);
 ```
 
 It is probable that you know that an usual Ajax request won't complete synchronously, which means `data`  won't have the Ajax result.
-If ajax(..) could block until the response came back, then the `data = ..` assignment would work fine.
+If `ajax(..)` could block until the response came back, then the `data = ..` assignment would work fine.
 
 But that isn't how it rolls! We make an asynchronous Ajax request *now*, and we won't get the results back until *later*.
 
@@ -79,7 +79,7 @@ The JS engine runs inside a hosting environment, which is for most developers th
 
 **Event Loop** is a JavaScript concurrency model that is  is quite different from models in other languages like C and Java.
 
-The event loop got its name because of how it's usually implemented, which usually resembles:
+It got its name because of how it's usually implemented, which usually resembles:
 ```javascript
 while (queue.waitForMessage()) {
   queue.processNextMessage();
