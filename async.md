@@ -213,8 +213,9 @@ As you can see, when you have a timer callback this is handled by the WebAPI. No
 4. And finally goes into the stack to be printed in the console.
 
 <br>
+<img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
 
-## Asynchronous II
+## Async call II
 <img src="/uploads/21146bab33da66bb663417b92317ffe5/www.GIFCreator.me_448cr9.gif" width="400"/>
 
 <br>
