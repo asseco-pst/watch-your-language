@@ -247,9 +247,15 @@ Because:
 
 <br>
 
-## Render Queue I
+## Render Queue
 
-Remember I said 
+Remember I said that blocking operations were bad, specially on the browser? That's because blocking operations on the browser freezes it!
+
+Like there is the **callback queue**, there's the render queue. 
+
+The render queue fires an event every 16ms to render the view and therefore, refreshing the screen. This event, like the tasks on the callback queue can only be pushed on the stack when the stack is empty.
+<br>So, If there are blocking operations happening on the callstackm, it is not possible to render the screen and the entire page freezes, preventing the user from doing any other operation.
+
 
 <table>
   <tr>
@@ -263,6 +269,8 @@ Remember I said
 </table>
 
 <br>
+
+### And that's it folks!
 
 # References
 [What the heck is the event loop anyway?](http://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html)
