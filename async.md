@@ -250,13 +250,19 @@ Because:
 ## Render Queue I
 
 Remember I said 
-<img src="/uploads/6e1989f87e8e81dbac522170d15ecad6/www.GIFCreator.me_xcjwOq.gif" width="400"/>
+
+<table>
+  <tr>
+    <td>Blocking</td>
+    <td>Non blocking</td>
+  </tr>
+  <tr>
+    <td><img src="/uploads/6e1989f87e8e81dbac522170d15ecad6/www.GIFCreator.me_xcjwOq.gif" width="400"/></td>
+    <td><img src="/uploads/59be802a9a473c34c5c1ae2bb6b0467c/www.GIFCreator.me_xxkOsW.gif" width="400"/></td>
+  </tr>
+</table>
 
 <br>
-
-## Render Queue II
-<img src="/uploads/59be802a9a473c34c5c1ae2bb6b0467c/www.GIFCreator.me_xxkOsW.gif" width="400"/>
-
 
 # References
 [What the heck is the event loop anyway?](http://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html)
