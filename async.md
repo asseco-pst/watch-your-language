@@ -172,7 +172,7 @@ Now in detail.
 
 <br>
 
-## Asynchronous I
+## Async callbacks and the Call stack
 
 The solutions for the problem of having blocking operation is asynchronous *callbacks* or *promises*, the `later` code!
 
@@ -202,7 +202,14 @@ man
 you rock
 ```
 
-Let's see why.
+Let's see how it behaves with regards to the call stack.
+
+<img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
+
+In this example we have some asynchronous code, which means, it isn't blocking.
+
+
+## Concurrency and the Event Loop
 
 <img src="/uploads/12c7743570fd88e8c95ed26bfe7d08ac/www.GIFCreator.me_UU3q43.gif" width="400"/>
 
@@ -213,7 +220,6 @@ As you can see, when you have a timer callback this is handled by the WebAPI. No
 4. And finally goes into the stack to be printed in the console.
 
 <br>
-<img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
 
 ## Async call II
 <img src="/uploads/21146bab33da66bb663417b92317ffe5/www.GIFCreator.me_448cr9.gif" width="400"/>
