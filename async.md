@@ -180,7 +180,7 @@ you rock
 
 Let's see how it behaves with regards to the call stack.
 
-<img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
+<img src="/uploads/ff1e042365b8553a8a0180341a213698/www.GIFCreator.me_0hw8rn.gif" width="400"/>
 
 In this example we have some asynchronous code, which means, it isn't blocking.
 
@@ -212,7 +212,7 @@ In the big picture, the JS environment is composed by:
 Now in detail.
 
 <br>
-
+<img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
 
 ## Concurrency and the Event Loop
 
