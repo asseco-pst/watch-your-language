@@ -235,7 +235,7 @@ And we're done.
 ## Async callbacks and the Event Loop
 Remeber the example back in the "[Async callbacks and the Call stack](async#async-callbacks-and-the-call-stack)" section? Where we had `setTimeout(fn, 500)` and asked if the output for `setTimeout(fn, 0)` would be different?
 
-As you can see, when you have a timer callback that is handled by the WebAPI. No mather if your timeout is `0` or higher, it will always have the same behaviour. 
+As you can see, when you have a timer callback it is handled by the WebAPI. No mather if your timeout is `0` or higher, it will always have the same behaviour. 
 Because:
 
 <img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
@@ -243,7 +243,7 @@ Because:
 1. First enters into the stack
 2. Then goes to the WebAPI
 3. Then the callback goes to the callback queue
-4. And finally in pushed on the stack to be printed in the console.
+4. And finally in pushed on the stack when it gets empty
 
 <br>
 
