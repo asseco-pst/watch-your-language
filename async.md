@@ -75,7 +75,8 @@ The JS engine itself has never done anything more than execute a single chunk of
 
 The JS engine runs inside a hosting environment, which is for most developers the typical web browser, that has handling the execution of multiple chunks of your program over time and it is called **"Event Loop"**.
 
-# Concurrency and the Event Loop
+
+# Event Loop
 
 **Event Loop** is a JavaScript concurrency model that is  is quite different from models in other languages like C and Java.
 
@@ -89,6 +90,8 @@ while (queue.waitForMessage()) {
 "There’s a process that constantly checks whether the call stack is empty, and whenever it’s empty, it checks if the event queue has any functions waiting to be invoked. If it does, then the first function in the queue gets invoked and moved over into the call stack. If the event queue is empty, then this monitoring process just keeps on running indefinitely. And voila — what I just described is the infamous Event Loop!" *- [What is the JavaScript Event Loop?](http://altitudelabs.com/blog/what-is-the-javascript-event-loop/)*
 
 Let's see this in practice. Follow me!
+
+<br>
 
 ## Call stack
 
@@ -107,6 +110,8 @@ In the above image we have an example of some synchronous code being executed.
 7. `printSquare()` calls `console.log()`, which goes into the stack.
 8. `printSquare()` returns, jumping out of the stack.
 9. Code execution finishes and the event loop stays continuously waiting for new events.
+
+<br>
 
 ## Blowing the stack
 
@@ -140,35 +145,6 @@ And remeber **"a new task can only get into the stack when the stack is empty"**
 And why is this a problem?
 
 Because we are in the browser.<br>The browser gets stuck and you can't do anything while there are pending operations on the call stack.<br>We'll see why in a moment.
-
-<br>
-
-## Is JS single-threaded?
-JS is a single-threaded, non-blocking assynchronous concurrent language. 
-
-While this is not false, it isn't quite true too. If you consider JS by itself, then **YES**, only one thing happens at the time in the JS thread.
-It is in the callstack where the magic happens.
-
-Although, in your JS environment you have more than just the JS runtime.
-You have the WebAPIs that process your asynchronous code in parallel in a separated thread. And voila, you have multiple threads executing your code.
-
-Let's see this, first in the big picture and then in detail.
-
-<br>
-
-## The big picture
-
-In the big picture, the JS environment is composed by:
-* The JS runtime, composed by:
-	* A heap, that is where memory allocations happen
-	* A call stack where our program actually executes
-* The event loop which decides when a new code chunk must go to the stack
-* The WebAPIs like the DOM, the Ajax requests, timers... Things that are handled out of the JS single thread
-* A callback queue with all the messages resulting from our WebAPI processing
-
-<img src="/uploads/1e664b873ed845bbbefb5018ff38c081/javascript_event_loop.png" width="400"/>
-
-Now in detail.
 
 <br>
 
@@ -207,6 +183,35 @@ Let's see how it behaves with regards to the call stack.
 <img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
 
 In this example we have some asynchronous code, which means, it isn't blocking.
+
+## Is JS single-threaded?
+JS is a single-threaded, non-blocking assynchronous concurrent language. 
+
+While this is not false, it isn't quite true too. If you consider JS by itself, then **YES**, only one thing happens at the time in the JS thread.
+It is in the callstack where the magic happens.
+
+Although, in your JS environment you have more than just the JS runtime.
+You have the WebAPIs that process your asynchronous code in parallel in a separated thread. And voila, you have multiple threads executing your code.
+
+Let's see this, first in the big picture and then in detail.
+
+<br>
+
+## The big picture
+
+In the big picture, the JS environment is composed by:
+* The JS runtime, composed by:
+	* A heap, that is where memory allocations happen
+	* A call stack where our program actually executes
+* The event loop which decides when a new code chunk must go to the stack
+* The WebAPIs like the DOM, the Ajax requests, timers... Things that are handled out of the JS single thread
+* A callback queue with all the messages resulting from our WebAPI processing
+
+<img src="/uploads/1e664b873ed845bbbefb5018ff38c081/javascript_event_loop.png" width="400"/>
+
+Now in detail.
+
+<br>
 
 
 ## Concurrency and the Event Loop
