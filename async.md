@@ -141,6 +141,8 @@ And why is this a problem?
 
 Because we are in the browser.<br>The browser gets stuck and you can't do anything while there are pending operations on the call stack.<br>We'll see why in a moment.
 
+<br>
+
 ## Is JS single-threaded?
 JS is a single-threaded, non-blocking assynchronous concurrent language. 
 
@@ -151,6 +153,8 @@ Although, in your JS environment you have more than just the JS runtime.
 You have the WebAPIs that process your asynchronous code in parallel in a separated thread. And voila, you have multiple threads executing your code.
 
 Let's see this, first in the big picture and then in detail.
+
+<br>
 
 ## The big picture
 
