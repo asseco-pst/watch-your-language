@@ -133,14 +133,32 @@ In the above image we have an example of some synchronous code being executed.
 
 ## Blowing the stack
 
-We use to hear "Don't blow the stack", "Whatch out, there's blocking operations there." What does this actually mean? We use to know how to solve these, but do we actually understand why er're doing it?
+We use to hear "Don't blow the stack!". What does this actually mean? We usually know how to solve these, but do we actually understand why we're doing it?
 
 <img src="/uploads/f03eff5ca5cd059d801e84379249d125/www.GIFCreator.me_CF6hUR.gif" width="400"/>
 
 For example, if we have a function `foo` that is recursive and has not stop condition, we'll have what is represented in the image above.
 
-## Asynchronous I
+## Blocking operations
+
+You also must hear a lot "Whatch out, there's blocking operations there, use a callback or a promise intead".
+
+This is really important and it is in fact one of the most powerful techinques to achieve good performance.
+
+Let's the next example where we have multiple synchronous Ajax requests. I know, I know, they should be asynchronous but these are just synchronous!
+
 <img src="/uploads/78f0030a4e830d6ab7cf3910dd01f9a1/www.GIFCreator.me_mtIJtE.gif" width="400"/>
+
+1. We call `"//foo.com"` and then we wait
+2. We call `"//bar.com"` and then we wait
+3. We call `"//qux.com"` and then we wait and wait and wait and wait... This can even never end
+
+Since they are synchronous other operations cannot enter into the stack because it isn't empty.
+And remeber **"a new task can only get into the stack when the stack is empty"**.
+
+And why is this a problem?
+
+Because we are in the browser.<br>The browser gets stuck and you can't do anything while there's operations peding on the call stack.<br>We'll see why in a moment.
 
 ## Asynchronous II
 <img src="/uploads/12c7743570fd88e8c95ed26bfe7d08ac/www.GIFCreator.me_UU3q43.gif" width="400"/>
