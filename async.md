@@ -209,21 +209,16 @@ As you can see, when you have a timer callback this is handled by the WebAPI. No
 <br>
 
 ## Asynchronous II
-<img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
-
-<br>
-
-## Asynchronous III
 <img src="/uploads/21146bab33da66bb663417b92317ffe5/www.GIFCreator.me_448cr9.gif" width="400"/>
 
 <br>
 
-## Asynchronous IV
+## Asynchronous III
 <img src="/uploads/44cbb171d94f0c91cfece948527c392d/www.GIFCreator.me_FsVqLX.gif" width="400"/>
 
 <br>
 
-## Asynchronous V
+## Asynchronous IV
 <img src="/uploads/35ea0909069d4c397fa32011b75e2201/www.GIFCreator.me_FsVqLX.gif" width="400"/>
 
 <br>
