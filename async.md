@@ -146,7 +146,7 @@ Because we are in the browser.<br>The browser gets stuck and you can't do anythi
 ## Is JS single-threaded?
 JS is a single-threaded, non-blocking assynchronous concurrent language. 
 
-While this is not false, it isn't quite true too. If you consider JS by itself, then YES, only one thing happens at the time in the JS thread.
+While this is not false, it isn't quite true too. If you consider JS by itself, then **YES**, only one thing happens at the time in the JS thread.
 It is in the callstack where the magic happens.
 
 Although, in your JS environment you have more than just the JS runtime.
@@ -174,7 +174,7 @@ Now in detail.
 
 ## Asynchronous I
 
-The solutions for the problem is using asynchronous callbacks, the `later` code!
+The solutions for the problem of having blocking operation is asynchronous *callbacks* or *promises*, the `later` code!
 
 A simple example would be:
 
