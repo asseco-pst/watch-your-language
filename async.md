@@ -139,6 +139,8 @@ We use to hear "Don't blow the stack!". What does this actually mean? We usually
 
 For example, if we have a function `foo` that is recursive and has not stop condition, we'll have what is represented in the image above.
 
+We'll have new operations entering into the stack continuously and never jumping out of it. Hiting the maximum call stack size.
+
 <br>
 
 ## Blocking operations
@@ -160,12 +162,49 @@ And remeber **"a new task can only get into the stack when the stack is empty"**
 
 And why is this a problem?
 
-Because we are in the browser.<br>The browser gets stuck and you can't do anything while there's operations peding on the call stack.<br>We'll see why in a moment.
+Because we are in the browser.<br>The browser gets stuck and you can't do anything while there are pending operations on the call stack.<br>We'll see why in a moment.
 
 <br>
 
 ## Asynchronous II
+
+The solutions for the problem is using asynchronous callbacksm, the `later` code!
+
+A simple example would be:
+
+```javascript
+console.log('Hey');
+
+setTimeout(function() {
+  console.log('you rock');
+}, 0);
+
+console.log('man');
+```
+
+What output could you expect?<br>Probably you would say something like
+```javascript
+Hey
+you rock
+man
+```
+
+Because the timeout is `0`. But actually the output is:
+```javascript
+Hey
+man
+you rock
+```
+
+Let's see why.
+
 <img src="/uploads/12c7743570fd88e8c95ed26bfe7d08ac/www.GIFCreator.me_UU3q43.gif" width="400"/>
+
+As you can see, when you have a timer callback this is handled by the WebAPI. No mather if your timeout is `0` or higher, it will always have the same behaviour. 
+1. First enters into the stack
+2. Then goes to the WebAPI
+3. When it is resolved, goes to the callback queue
+4. And finally goes into the stack to be printed in the console.
 
 <br>
 
