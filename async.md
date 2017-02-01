@@ -159,7 +159,7 @@ console.log('Hey');
 
 setTimeout(function() {
   console.log('you rock');
-}, 0);
+}, 5000);
 
 console.log('man');
 ```
@@ -171,15 +171,10 @@ you rock
 man
 ```
 
-Because the timeout is `0`. But actually the output is:
-```javascript
-Hey
-man
-you rock
-```
+But can you explain me why? If I would defined `0` instead `500` the result would be different?
 
 <br>
-Let's see how it behaves with regards to the call stack.
+Let's see how it behaves with regards to the call stack and then we get our answer.
 
 <img src="/uploads/ff1e042365b8553a8a0180341a213698/www.GIFCreator.me_0hw8rn.gif" width="400"/>
 
@@ -191,6 +186,8 @@ In this example we have some asynchronous code, which means, it isn't blocking.
 4. And then suddenly, `5` seconds later, `console.log('there')` goes into the stack and returns
 
 What the heck is going on here? Let's split this bit by bit.
+
+<br>
 
 ## Is JS single-threaded?
 JS is a single-threaded, non-blocking assynchronous concurrent language. 
@@ -215,6 +212,8 @@ In the big picture, the JS environment is composed by:
 * The WebAPIs like the DOM, the Ajax requests, timers... Things that are handled out of the JS single thread
 * A callback queue with all the messages resulting from our WebAPI processing
 
+<br>
+
 ## Concurrency and the Event Loop
 
 Now that we have the big picture in our minds let's analyse the asynchronous example given before.
@@ -233,14 +232,18 @@ And we're done.
 ### **This is the Event Loop**! 
 **It has a very tiny am simple task. It looks at the callback queue and at the callstack, if the stack is empty it takes the first thing in the queue an pushes it on the stack**
 
+## Async callbacks and the Event Loop
+Remeber the example back in the "[Async callbacks and the Call stack](async#async-callbacks-and-the-call-stack)" section? Where we had `setTimeout(fn, 500)` and asked if the output for `setTimeout(fn, 0)` would be different?
+
+As you can see, when you have a timer callback that is handled by the WebAPI. No mather if your timeout is `0` or higher, it will always have the same behaviour. 
+Because:
 
 <img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
 
-As you can see, when you have a timer callback this is handled by the WebAPI. No mather if your timeout is `0` or higher, it will always have the same behaviour. 
 1. First enters into the stack
 2. Then goes to the WebAPI
-3. When it is resolved, goes to the callback queue
-4. And finally goes into the stack to be printed in the console.
+3. Then the callback goes to the callback queue
+4. And finally in pushed on the stack to be printed in the console.
 
 <br>
 
