@@ -140,7 +140,7 @@ Let's see the next example where we have multiple synchronous Ajax requests. <br
 3. We call `"//qux.com"` and then we wait and wait and wait and wait... This can even never end
 
 Since they are synchronous, other tasks cannot enter into the stack because it isn't empty.
-And remeber **"a new task can only get into the stack when the stack is empty"**.
+And remember **"a new task can only get into the stack when the stack is empty"**.
 
 And why is this a problem?
 
@@ -233,7 +233,7 @@ And we're done.
 **It has a very tiny am simple task. It looks at the callback queue and at the callstack, if the stack is empty it takes the first thing in the queue an pushes it on the stack**
 
 ## Async callbacks and the Event Loop
-Remeber the example back in the "[Async callbacks and the Call stack](async#async-callbacks-and-the-call-stack)" section? Where we had `setTimeout(fn, 500)` and asked if the output for `setTimeout(fn, 0)` would be different?
+Remember the example back in the "[Async callbacks and the Call stack](async#async-callbacks-and-the-call-stack)" section? Where we had `setTimeout(fn, 500)` and asked if the output for `setTimeout(fn, 0)` would be different?
 
 As you can see, when you have a timer callback it is handled by the WebAPI. No mather if your timeout is `0` or higher, it will always have the same behaviour. 
 Because:
@@ -247,22 +247,9 @@ Because:
 
 <br>
 
-## Async call II
-<img src="/uploads/21146bab33da66bb663417b92317ffe5/www.GIFCreator.me_448cr9.gif" width="400"/>
-
-<br>
-
-## Asynchronous III
-<img src="/uploads/44cbb171d94f0c91cfece948527c392d/www.GIFCreator.me_FsVqLX.gif" width="400"/>
-
-<br>
-
-## Asynchronous IV
-<img src="/uploads/35ea0909069d4c397fa32011b75e2201/www.GIFCreator.me_FsVqLX.gif" width="400"/>
-
-<br>
-
 ## Render Queue I
+
+Remember I said 
 <img src="/uploads/6e1989f87e8e81dbac522170d15ecad6/www.GIFCreator.me_xcjwOq.gif" width="400"/>
 
 <br>
