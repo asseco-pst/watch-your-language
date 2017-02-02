@@ -26,12 +26,8 @@ Each of the following topics should not take longer than 1 hour and must be as m
 4. [Asynchronous programming part II](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async)
  * Callbacks and Promises
 
-5. Best practices part I
- * DRY - Don’t repeat yourself
- * Single responsibility + Component driven
- * ESLint
- 
-6. Best practices part II
- * KISS
- * FP
+5. [Best practices part I]((http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices)
+
+6. [Best practices part II]((http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices)
+
  
