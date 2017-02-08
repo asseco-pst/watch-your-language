@@ -18,13 +18,13 @@ Each of the following topics should not take longer than 1 hour and must be as m
  * [How to set `this`](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/this-and-object-prototypes#how-to-set-this)
  * [What's an object](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/this-and-object-prototypes#whats-an-object)
  * [Class vs Prototypes](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/this-and-object-prototypes#class-vs-prototypes)
-
-3. [Best practices part I](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices)
             	
-4. [Asynchronous programming part I](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async)
- * Sync vs Async
- * Event loop
- 
+3. [Asynchronous programming part I](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async)
+ * [Sync vs Async](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#sync-vs-async)
+ * [Event loop](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#event-loop)
+
+4. [Best practices part I](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices)
+
 5. [Asynchronous programming part II](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async)
  * Callbacks and Promises
 
