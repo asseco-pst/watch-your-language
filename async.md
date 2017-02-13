@@ -186,7 +186,7 @@ you rock
 man
 ```
 
-But can you explain me why? If I would defined `0` instead `5000` the result would be different?
+But can you explain me why? If I had defined `0` instead of `5000`, the result would be different?
 
 <br>
 Let's see how it behaves with regards to the call stack and then we get our answer.
@@ -208,7 +208,7 @@ What the heck is going on here? Let's split this bit by bit.
 JS is a single-threaded, non-blocking assynchronous concurrent language. 
 
 While this is not false, it isn't quite true too. If you consider JS by itself, then **YES**, only one thing happens at the time in the JS thread.
-It is in the callstack where the magic happens.
+It is in the call stack where the magic happens.
 
 Although, in your JS environment you have more than just the JS runtime.
 You have the WebAPIs that process your asynchronous code in parallel in a separated thread. And voila, you have multiple threads executing your code.
@@ -245,7 +245,7 @@ Now that we have the big picture in our minds let's analyse the asynchronous exa
 And we're done.
 
 ### **This is the Event Loop**! 
-**It has a very tiny am simple task. It looks at the callback queue and at the callstack, if the stack is empty it takes the first thing in the queue an pushes it on the stack**
+**It has a very tiny am simple task. It looks at the callback queue and at the call stack, if the stack is empty it takes the first thing in the queue an pushes it on the stack**
 
 ## Async callbacks and the Event Loop
 Remember the example back in the "[Async callbacks and the Call stack](async#async-callbacks-and-the-call-stack)" section? Where we had `setTimeout(fn, 500)` and asked if the output for `setTimeout(fn, 0)` would be different?
@@ -269,7 +269,7 @@ Remember I said that blocking operations were bad, specially on the browser? Tha
 Like there is the **callback queue**, there's the render queue. 
 
 The render queue fires an event every 16ms to render the view and therefore, refreshing the screen. This event, like the tasks on the callback queue can only be pushed on the stack when the stack is empty.
-<br>So, If there are blocking operations happening on the callstackm, it is not possible to render the screen and the entire page freezes, preventing the user from doing any other operation.
+<br>So, If there are blocking operations happening on the call stack, it is not possible to render the screen and the entire page freezes, preventing the user from doing any other operation.
 
 
 <table>
