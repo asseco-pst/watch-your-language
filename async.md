@@ -1,3 +1,9 @@
+ * [Mind the gap, Now & later](async#mind-the-gap-now-later)
+ * [Sync vs Async](async#sync-vs-async)
+ * [A Program in Chunks](async#a-program-in-chunks)
+ * [Event Loop](async#event-loop)
+ * [References](async#references)
+
 # Mind the gap, Now & later
 
 There's a gap between a part of your program that runs *now* and another one that runs *later*, where your program isn't actively executing.
@@ -200,7 +206,7 @@ You have the WebAPIs that process your asynchronous code in parallel in a separa
 
 Let's see this, first in the big picture and then in detail.
 
-<br>
+<br> 
 
 ## The big picture
 
