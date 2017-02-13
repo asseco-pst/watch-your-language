@@ -40,7 +40,7 @@ A way to handle the Ajax request is using [callback](async) functions or [promis
 ```javascript
 // ajax(..) is some arbitrary Ajax function given by a library
 ajax('http://some.url.1', function myCallbackFunction(data) {
-	console.log( data ); // Yay, I gots me some `data`!
+	console.log( data ); // Yay, it gots me some `data`!
 });
 ```
 
@@ -93,7 +93,7 @@ The JS engine runs inside a hosting environment, which is for most developers th
 
 # Event Loop
 
-**Event Loop** is a JavaScript concurrency model that is  is quite different from models in other languages like C and Java.
+**Event Loop** is a JavaScript concurrency model that is quite different from models in other languages like C and Java.
 
 It got its name because of how it's usually implemented, which usually resembles:
 ```javascript
