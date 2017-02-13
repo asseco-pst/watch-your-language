@@ -136,7 +136,7 @@ We use to hear "Don't blow the stack!". What does this actually mean? We usually
 
 For example, if we have a function `foo` that is recursive and has not stop condition, we'll have what is represented in the image above.
 
-We'll have new tasks entering into the stack continuously and never jumping out of it. Hiting the maximum call stack size.
+We'll have new tasks entering into the stack continuously and never jumping out of it, hiting the maximum call stack size.
 
 <br>
 
@@ -186,7 +186,7 @@ you rock
 man
 ```
 
-But can you explain me why? If I would defined `0` instead `500` the result would be different?
+But can you explain me why? If I would defined `0` instead `5000` the result would be different?
 
 <br>
 Let's see how it behaves with regards to the call stack and then we get our answer.
