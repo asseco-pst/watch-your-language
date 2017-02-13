@@ -2,6 +2,15 @@
  * [Sync vs Async](async#sync-vs-async)
  * [A Program in Chunks](async#a-program-in-chunks)
  * [Event Loop](async#event-loop)
+  * [Call stack](async#call-stack)
+  * [Blowing the stack](async#blowing-the-stack)
+  * [Blocking operations](async#blocking-operations)
+  * [Async callbacks and the Call stack](async#async-callbacks-and-the-call-stack)
+  * [Is JS single-threaded?](async#is-js-single-threaded)
+  * [The big picture](async#the-big-picture)
+  * [Concurrency and the Event Loop](async#concurrency-and-the-event-loop)
+  * [Async callbacks and the Event Loop](async#async-callbacks-and-the-event-loop)
+  * [Render Queue](async#render-queue)
  * [References](async#references)
 
 # Mind the gap, Now & later
@@ -276,7 +285,6 @@ The render queue fires an event every 16ms to render the view and therefore, ref
 
 <br>
 
-### And that's it folks!
 
 # References
 [What the heck is the event loop anyway?](http://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html)
