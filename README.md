@@ -20,8 +20,19 @@ Each of the following topics should not take longer than 1 hour and must be as m
  * [Class vs Prototypes](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/this-and-object-prototypes#class-vs-prototypes)
             	
 3. [Asynchronous programming part I](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async)
- * [Sync vs Async](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#sync-vs-async)
- * [Event loop](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#event-loop)
+  * [Mind the gap, Now & later](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#mind-the-gap-now-later)
+  * [Sync vs Async](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#sync-vs-async)
+  * [A Program in Chunks](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#a-program-in-chunks)
+  * [Event Loop](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#event-loop)
+    * [Call stack](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#call-stack)
+    * [Blowing the stack](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#blowing-the-stack)
+    * [Blocking operations](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#blocking-operations)
+    * [Async callbacks and the Call stack](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#async-callbacks-and-the-call-stack)
+    * [Is JS single-threaded?](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#is-js-single-threaded)
+    * [The big picture](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#the-big-picture)
+    * [Concurrency and the Event Loop](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#concurrency-and-the-event-loop)
+    * [Async callbacks and the Event Loop](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#async-callbacks-and-the-event-loop)
+    * [Render Queue](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#render-queue)
 
 4. [Best practices part I](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices)
 
