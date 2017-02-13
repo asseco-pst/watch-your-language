@@ -245,7 +245,7 @@ Now that we have the big picture in our minds let's analyse the asynchronous exa
 And we're done.
 
 ### **This is the Event Loop**! 
-**It has a very tiny am simple task. It looks at the callback queue and at the call stack, if the stack is empty it takes the first thing in the queue an pushes it on the stack**
+**It has a very tiny and simple task. It looks at the callback queue and at the call stack, if the stack is empty it takes the first thing in the queue and pushes it on the stack**
 
 ## Async callbacks and the Event Loop
 Remember the example back in the "[Async callbacks and the Call stack](async#async-callbacks-and-the-call-stack)" section? Where we had `setTimeout(fn, 500)` and asked if the output for `setTimeout(fn, 0)` would be different?
@@ -258,7 +258,7 @@ Because:
 1. First enters into the stack
 2. Then goes to the WebAPI
 3. Then the callback goes to the callback queue
-4. And finally in pushed on the stack when it gets empty
+4. And finally is pushed on the stack when it gets empty
 
 <br>
 
