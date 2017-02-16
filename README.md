@@ -25,8 +25,12 @@ Each of the following topics should not take longer than 1 hour and must be as m
   * [A Program in Chunks](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#a-program-in-chunks)
   * [Event Loop](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async#event-loop)
 
-4. [Asynchronous programming part II](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/async)
- * Callbacks and Promises
+4. [Asynchronous programming part II](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/callbacks-and-promises)
+ * [Callbacks](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/callbacks-and-promises#callbacks)
+ * [Callback hell](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/callbacks-and-promises#callback-hell)
+ * [Promises](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/callbacks-and-promises#promises)
+ * [Native vs jQuery](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/callbacks-and-promises#native-vs-jquery)
+ * [Leap into the future](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/callbacks-and-promises#leap-into-the-future)
  
 5. [Best practices part I](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices)
 
