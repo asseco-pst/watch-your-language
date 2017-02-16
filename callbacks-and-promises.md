@@ -59,3 +59,13 @@ function doThis() {
 # Promises
 # Native vs jQuery
 # Leap into the future
+
+# References
+
+[Callback with minions](https://medium.freecodecamp.com/javascript-callbacks-explained-using-minions-da272f4d9bcd#.vwuhbz6vz)
+
+[Callback Hell](http://callbackhell.com/)
+
+[You don't know JS - Async and performance](https://github.com/getify/You-Dont-Know-JS/tree/master/async%20%26%20performance)
+
+[Async and await](http://exploringjs.com/es2016-es2017/ch_async-functions.html)
