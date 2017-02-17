@@ -75,6 +75,8 @@ function doThis() {
 
 For simplicity (sanity) sake instead of explaining callback hell with request let's just say you want to do a countdown, something like "3...2...1...DONE!" but you can only use timeouts, one contrived way of doing so would be the next example
 
+![image](/uploads/155aaa3d8efb4a4b95c00e3096848c5e/image.png)
+
 ```javascript
 setTimeout(function() {
   console.log('3...')
@@ -196,7 +198,7 @@ asyncExample();
 console.log('this continues')
 ```
 
-  - When using the latest `babel` and in Chrome/Firefox you have `async/await` from `ECMAScript2017`
+  - When using the latest `babel` or in Chrome/Firefox you have `async/await` from `ECMAScript2017`
   - This allows you to have a way more easier code to read while having synchronicity
   - In this case the program continues while `syncExample` is being interpreted
   - When the await is done resolving then the `syncExample` continues it's code
@@ -207,6 +209,10 @@ console.log('this continues')
 
 [Callback Hell](http://callbackhell.com/)
 
+[Avoid callback hell](https://blog.risingstack.com/node-js-async-best-practices-avoiding-callback-hell-node-js-at-scale/)
+
 [You don't know JS - Async and performance](https://github.com/getify/You-Dont-Know-JS/tree/master/async%20%26%20performance)
+
+[Native Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 [Async and await](http://exploringjs.com/es2016-es2017/ch_async-functions.html)
