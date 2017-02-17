@@ -121,23 +121,78 @@ function countDownDone() {
 
 # Promises
 
-WIP: Talk about what it is
+Promise is a language feature that allow us to set what order and steps we want our code to go through without blocking operations (asynchronicity) and without having the mess that callback hell is (or at least try not to).
+
+![image](/uploads/b7d357309ac4b402c1019f00181dd22c/image.png)
+
+WIP: Describe the graph
+WIP: Give the 4 examples from the article
 
 # Native vs jQuery
 
 **Using Jquery**
 
+WIP: Do an ajax call with .all
+
 **Using Native**
+
+Using our `setTimeout` example from earlier in the callback hell, the same implementation can be done using native promises (`ECMAScript 2015/ES6`)
+
+```javascript
+function PromisifyingTimeout(fn, time) {
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+      try {
+      	resolve(fn())
+      } catch(e) {
+      	reject(e)
+      }
+    }, time)
+  })
+}
+
+PromisifyingTimeout(countFromThree, 1000)
+  .then(function () {
+    return PromisifyingTimeout(countFromTwo, 1000)
+  })
+  .then(function () {
+    return PromisifyingTimeout(countFromOne, 1000)
+  })
+  .then(function () {
+    return PromisifyingTimeout(countDownDone, 1000)
+  });
+
+
+function countFromThree() {
+  console.log('3...')
+}
+
+function countFromTwo() {
+  console.log('2...')
+}
+
+function countFromOne() {
+  console.log('1...')
+}
+
+function countDownDone() {
+  console.log('DONE!')
+}
+```
+
+  - While more verbose you can now easily see the sequence of execution of the code
+  - As seen before every `.then` must have a return so that we can have the code being `sync` instead of `async`
+  - We could add a `return` while some value in `countFromThree` and we would get that value as a param for the next `.then`, in this case the one executing `PromisifyingTimeout(countFromTwo, 1000)`
 
 # Leap into the future
 
 ```javascript
-async function syncExample() {
+async function asyncExample() {
   const a = await Promise.resolve('foo');
   console.log('and this waits for the await resolve', a);
 }
 
-syncExample();
+asyncExample();
 console.log('this continues')
 ```
 
