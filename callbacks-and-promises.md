@@ -13,10 +13,23 @@ In other words, it's the way the JS engine has of saying "When this function fin
 ```javascript
 setTimeout(function() {
   console.log('after 5 seconds I was called')
-} , 5000)
+}, 5000)
 ```
 
   - This is a simple example of a callback being used, `setTimeout` after 5 seconds will call the functions we are using as a first parameter for the `setTimeout`.
+
+```javascript
+function sum(val1, val2, callback) {
+  var sum = val1 + val2;
+  callback(sum);
+}
+
+function myCallback(response) {
+  console.log('Sum result: ', response)
+}
+
+sum(1, 2, myCallback)
+```
 
 ```javascript
 $.ajax( "myurl" ).done(function(response) {
@@ -56,6 +69,24 @@ function doThis() {
 - It's good practice to separate the callbacks so it's easier to debug and navigate using the call stack in the browser developer tools
 
 # Callback Hell
+
+For simplicity (sanity) sake instead of explaining callback hell with request let's just say you want to do a countdown, something like "3...2...1...DONE!" but you can only use timeouts, one contrived way of doing so would be the next example
+
+```javascript
+setTimeout(function() {
+  console.log('3...')
+  setTimeout(function() {
+    console.log('2...')
+    setTimeout(function() {
+      console.log('1...')
+      setTimeout(function() {
+        console.log('DONE!')
+      }, 1000)
+    }, 1000)
+  }, 1000)
+}, 1000);
+```
+
 # Promises
 # Native vs jQuery
 # Leap into the future
