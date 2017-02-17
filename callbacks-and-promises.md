@@ -1,4 +1,3 @@
-This page is a **WIP**
  * [Callbacks](callbacks-and-promises#callbacks)
  * [Callback Hell](callbacks-and-promises#callback-hell)
  * [Promises](callbacks-and-promises#promises)
@@ -73,9 +72,11 @@ function doThis() {
 
 # Callback Hell
 
-For simplicity (sanity) sake instead of explaining callback hell with request let's just say you want to do a countdown, something like "3...2...1...DONE!" but you can only use timeouts, one contrived way of doing so would be the next example
+What's callback hell? I know it hurts the eyes but just look at the next picture.
 
 ![image](/uploads/155aaa3d8efb4a4b95c00e3096848c5e/image.png)
+
+For simplicity (sanity) sake instead of explaining callback hell with request let's just say you want to do a countdown, something like "3...2...1...DONE!" but you can only use timeouts, one contrived way of doing so would be the next example
 
 ```javascript
 setTimeout(function() {
@@ -127,14 +128,72 @@ Promise is a language feature that allow us to set what order and steps we want 
 
 ![image](/uploads/b7d357309ac4b402c1019f00181dd22c/image.png)
 
-WIP: Describe the graph
-WIP: Give the 4 examples from the article
+Upper branch of the image:
+  - A promise when `resolve` is done gets fullfiled and executes the next `.then` available
+  - If that `.then` function has a `return` the next `.then` will be executed in a `sync` manner
+  - If the `.then` doesn't have any return the next `.then` are executed in parallel until a return is found or no more `.then` exist.
+Lower branch of the image:
+  - A promise when `reject` is done gets rejected and executes the next `.catch` available
+  - It will ignore any `.then` between the `.then` in error and the `.catch`
+
+![image](/uploads/bdc4d818f9841de87c454984120e0ec3/image.png)
+
+  - Most of the time we confuse the 4 examples above
+  - 1 and 4 are the `sync` and what it's recommended to be used most of the time
+  - 2 and 3 are the `async` and are not that common/useful. Some would even consider it an error
+
+You can confirm that in a more visual manner with the images below
+
+Number 1:
+
+![image](/uploads/d9ea96d68f69b5d06670a833a3926e2f/image.png)
+
+Number 2:
+
+![image](/uploads/4d9f9c5b4c4720bd76b0a5ecb9649904/image.png)
+
+Number 3:
+
+![image](/uploads/392ad9a37a88ff52b4929b50ab3e31cd/image.png)
+
+Number 4:
+
+![image](/uploads/a56a6598fc654a61eea403c22d064ed4/image.png)
 
 # Native vs jQuery
 
+The difference is mostly that jQuery as alot of fallbacks and more built in methods that ease the use of promises.
+While native has only `.then, .catch, .all. and .race`, jQuery deferred has those and methods like `.always` which execute in a resolve and in a reject.
+
 **Using Jquery**
 
-WIP: Do an ajax call with .all
+```javascript
+function myCall() {
+  var defer = $.Deferred(function(deferred) {
+    $.ajax({
+      url:'http://codepen.io/chriscoyier/pen/EAIJj.js'
+    })
+    .done(function(response) {
+      deferred.resolve(JSON.parse(response))
+    })
+    .fail(function(e) {
+      deferred.reject(e)
+    });
+  });	
+  return defer.promise()
+}
+
+$.when(myCall())
+  .then(function(param) {
+    console.log('success ->', param)
+  })
+  .catch(function(err) {
+    console.log('error ->', err)
+  });
+```
+
+  - `$.when` waits for a resolve or a reject from the promises you send as a parameter, in this case `myCall`
+  - You could send more than one promise and it would only execute when all of them are resolved
 
 **Using Native**
 
