@@ -21,7 +21,7 @@ setTimeout(function() {
 ```javascript
 function sum(val1, val2, callback) {
   var sum = val1 + val2;
-  callback(sum);
+  if (callback) callback(sum);
 }
 
 function myCallback(response) {
@@ -30,6 +30,9 @@ function myCallback(response) {
 
 sum(1, 2, myCallback)
 ```
+
+  - You simple send a function as a parameter to be called inside the other function
+  - `myCallback` to be called inside `sum` in this case
 
 ```javascript
 $.ajax( "myurl" ).done(function(response) {
@@ -84,11 +87,48 @@ setTimeout(function() {
       }, 1000)
     }, 1000)
   }, 1000)
-}, 1000);
+}, 0);
 ```
 
+  - As you can see it's hard to get a hold of what is going on, even in this simple scenario
+
+```javascript
+setTimeout(countFromThree, 0);
+
+function countFromThree() {
+  console.log('3...')
+  setTimeout(countFromTwo, 1000)
+}
+
+function countFromTwo() {
+  console.log('2...')
+  setTimeout(countFromOne, 1000)
+}
+
+function countFromOne() {
+  console.log('1...')
+  setTimeout(countDownDone, 1000)
+}
+
+function countDownDone() {
+  console.log('DONE!')
+}
+```
+
+  - The simplest thing to do it's to name every function and separate them
+  - This allow for a better call stack and a more simple to read code
+  - It is still contrived and not the best way to have synchronicity, that's when promises enter the frame
+
 # Promises
+
+WIP: Talk about what it is
+
 # Native vs jQuery
+
+**Using Jquery**
+
+**Using Native**
+
 # Leap into the future
 
 # References
