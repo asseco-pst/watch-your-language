@@ -131,6 +131,21 @@ WIP: Talk about what it is
 
 # Leap into the future
 
+```javascript
+async function syncExample() {
+  const a = await Promise.resolve('foo');
+  console.log('and this waits for the await resolve', a);
+}
+
+syncExample();
+console.log('this continues')
+```
+
+  - When using the latest `babel` and in Chrome/Firefox you have `async/await` from `ECMAScript2017`
+  - This allows you to have a way more easier code to read while having synchronicity
+  - In this case the program continues while `syncExample` is being interpreted
+  - When the await is done resolving then the `syncExample` continues it's code
+
 # References
 
 [Callback with minions](https://medium.freecodecamp.com/javascript-callbacks-explained-using-minions-da272f4d9bcd#.vwuhbz6vz)
