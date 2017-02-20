@@ -118,13 +118,13 @@ function countDownDone() {
 }
 ```
 
-  - The simplest thing to do it's to name every function and separate them
-  - This allow for a better call stack and a more simple to read code
-  - It is still contrived and not the best way to have synchronicity, that's when promises enter the frame
+  - The simplest thing to do is to name every function and separate them
+  - This leads to a better call stack and a more simple to read code
+  - It is still contrived and not the best way to have synchrony, that's when promises enter the frame
 
 # Promises
 
-Promise is a language feature that allow us to set what order and steps we want our code to go through without blocking operations (asynchronicity) and without having the mess that callback hell is (or at least try not to).
+Promise is a language feature that allow us to set what order and steps we want our code to go through without blocking operations (asynchrony) and without having the mess that callback hell is (or at least try not to).
 
 ![image](/uploads/b7d357309ac4b402c1019f00181dd22c/image.png)
 
@@ -162,7 +162,7 @@ Number 4:
 
 # Native vs jQuery
 
-The difference is mostly that jQuery as alot of fallbacks and more built in methods that ease the use of promises.
+The difference is mostly that jQuery has alot of fallbacks and more built in methods that ease the use of promises.
 While native has only `.then, .catch, .all. and .race`, jQuery deferred has those and methods like `.always` which execute in a resolve and in a reject.
 
 **Using Jquery**
