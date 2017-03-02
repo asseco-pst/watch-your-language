@@ -964,4 +964,5 @@ var actions = function() {
 
 # References
 [Clean Code](https://github.com/ryanmcdermott/clean-code-javascript)
+
 [Composition over Inheritance](https://www.youtube.com/watch?v=wfMtDGfHWpA)
