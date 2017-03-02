@@ -961,8 +961,11 @@ JavaScript, being a dynamic and loosely-typed language, is especially prone to d
 
 Airbnb Style Guide
 [ES5](https://github.com/airbnb/javascript/tree/es5-deprecated/es5)
+[ES6](https://github.com/airbnb/javascript)
 
 # References
 [Clean Code](https://github.com/ryanmcdermott/clean-code-javascript)
 
 [Composition over Inheritance](https://www.youtube.com/watch?v=wfMtDGfHWpA)
+
+[ESLint](http://eslint.org)
