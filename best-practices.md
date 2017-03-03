@@ -4,12 +4,16 @@
  * [Classes](best-practices#classes)
  * [Concurrency](best-practices#concurrency)
  * [Comments](best-practices#comments)
-* [Linter](best-practices#linter)
- * [Rules](best-practices#rules)
+* [Test-Driven Development](best-practices#test-driven-development)
+ * [Process](best-practices#process)
+ * [Benefits](best-practices#benefits)
 * [Code review](best-practices#code-review)
- * [What is it](best-practices#what-is-it)
  * [Knowledge share](best-practices#knowledge-share)
+ * [Better estimates](best-practices#better-estimates)
  * [Takes time](best-practices#takes-time)
+* [Style Guide](best-practices#style-guide)
+* [Linter](best-practices#linter)
+* [Compiler](best-practices#Compiler)
 * [References](best-practices#references)
 
 # Clean code
@@ -880,21 +884,28 @@ var actions = function() {
 };
 ```
 
-# Linter
-Code linting is a type of static analysis that is frequently used to find problematic patterns or code that doesn’t adhere to certain style guidelines. There are code linters for most programming languages, and compilers sometimes incorporate linting into the compilation process.
+# Test-Driven Development
+Test-driven development (TDD) is an advanced technique of using automated unit tests to drive the design of software and force decoupling of dependencies. The result of using this practice is a comprehensive suite of unit tests that can be run at any time to provide feedback that the software is still working.
 
-JavaScript, being a dynamic and loosely-typed language, is especially prone to developer error. Without the benefit of a compilation process, JavaScript code is typically executed in order to find syntax or other errors. Linting tools like ESLint allow developers to discover problems with their JavaScript code without executing it.
+## Process
+The motto of test-driven development is "Red, Green, Refactor."
+* Red: Create a test and make it fail.
+* Green: Make the test pass by any means necessary.
+* Refactor: Change the code to remove duplication in your project and to improve the design while ensuring that all tests still pass.
+![red-green-refactorFINAL2](/uploads/4bd32f005002cfed5b16deea99eb0c4e/red-green-refactorFINAL2.png)
 
-## Rules
-Airbnb Style Guide
-[ES5](https://github.com/airbnb/javascript/tree/es5-deprecated/es5)
-[ES6](https://github.com/airbnb/javascript)
+## Benefits
+* The suite of unit tests provides constant feedback that each component is still working.
+* The unit tests act as documentation that cannot go out-of-date, unlike separate documentation, which can and frequently does.
+* When the test passes and the production code is refactored to remove duplication, it is clear that the code is finished, and the developer can move on to a new test.
+* Test-driven development forces critical analysis and design because the developer cannot create the production code without truly understanding what the desired result should be and how to test it.
+* The software tends to be better designed, that is, loosely coupled and easily maintainable, because the developer is free to make design decisions and refactor at any time with confidence that the software is still working. This confidence is gained by running the tests. The need for a design pattern may emerge, and the code can be changed at that time.
+* The test suite acts as a regression safety net on bugs: If a bug is found, the developer should create a test to reveal the bug and then modify the production code so that the bug goes away and all other tests still pass. On each successive test run, all previous bug fixes are verified.
+* Reduced debugging time!
 
 # Code review
-
 ![687474703a2f2f7777772e6f736e6577732e636f6d2f696d616765732f636f6d6963732f7774666d2e6a7067](/uploads/962ebb6c7e3437b65d384b1f43ccadda/687474703a2f2f7777772e6f736e6577732e636f6d2f696d616765732f636f6d6963732f7774666d2e6a7067.jpg)
 
-## What is it
 When a developer is finished working on an issue, another developer looks over the code and considers questions like:
 
 *  Are there any obvious logic errors in the code?
@@ -908,6 +919,9 @@ Code reviews should integrate with a team’s existing process. For example, if 
 No one is the only person who knows a specific part of the code base. Simply put, code reviews help facilitate knowledge sharing across the code base and across the team. 
 
 > As code reviews expose developers to new ideas and technologies, they write better and better code. 
+
+## Better estimates
+Estimation is a team exercise, and the team makes better estimates as product knowledge is spread across the team. As new features are added to the existing code, the original developer can provide good feedback and estimation. In addition, any code reviewer is also exposed to the complexity, known issues, and concerns of that area of the code base. The code reviewer, then, shares in the knowledge of the original developer of that part of the code base. This practice creates multiple, informed inputs which, when used for a final estimate always makes that estimate stronger and reliable.
 
 ## Takes time
 Sure, they take time. But that time isn't wasted–far from it.
@@ -927,11 +941,26 @@ When developers know their code will be reviewed by a teammate, they make an ext
 
 Don’t wait for a code review if feedback is needed earlier in the development cycle. Feedback early and often makes for better code, so don't be shy about involving others–whenever that may be. It'll make your work better, but it also makes your teammates better code reviewers. And the virtuous cycle continues....!
 
+# Style Guide
+![1-9nMBMt-OugnruBr_M-WuEQ](/uploads/0227a609241bf877374a5dca0b18dea2/1-9nMBMt-OugnruBr_M-WuEQ.png)
+
+The most important thing, no matter what your preferred [javascript style](https://github.com/airbnb/javascript) is, is to be consistent when working with a team or a large codebase that will have to be maintained in the future.
+
+# Linter
+Code linting is a type of static analysis that is frequently used to find problematic patterns or code that doesn’t adhere to certain style guidelines. There are code linters for most programming languages, and compilers sometimes incorporate linting into the compilation process.
+
+JavaScript, being a dynamic and loosely-typed language, is especially prone to developer error. Without the benefit of a compilation process, JavaScript code is typically executed in order to find syntax or other errors. Linting tools like [ESLint](http://eslint.org) allow developers to discover problems with their JavaScript code without executing it.
+
+# Compiler
+[Babel](https://babeljs.io) is a essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows you to use ES6 features in your projects and then compiles ES5 for you to use in production.
+
+> Use next generation JavaScript, today.
+
 # References
 [Clean Code](https://github.com/ryanmcdermott/clean-code-javascript)
 
 [Composition over Inheritance](https://www.youtube.com/watch?v=wfMtDGfHWpA)
 
-[ESLint](http://eslint.org)
-
 [Code reviews](https://www.atlassian.com/agile/code-reviews)
+
+[Guidelines for Test-Driven Development](https://msdn.microsoft.com/en-us/library/aa730844(v=vs.80).aspx)
