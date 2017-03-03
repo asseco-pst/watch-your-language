@@ -6,6 +6,7 @@
  * [Comments](best-practices#comments)
 * [Linter](best-practices#linter)
  * [Rules](best-practices#rules)
+* [Code review](best-practices#code-review)
 * [References](best-practices#references)
 
 # Clean code
@@ -882,10 +883,12 @@ Code linting is a type of static analysis that is frequently used to find proble
 JavaScript, being a dynamic and loosely-typed language, is especially prone to developer error. Without the benefit of a compilation process, JavaScript code is typically executed in order to find syntax or other errors. Linting tools like ESLint allow developers to discover problems with their JavaScript code without executing it.
 
 ## Rules
-
 Airbnb Style Guide
 [ES5](https://github.com/airbnb/javascript/tree/es5-deprecated/es5)
 [ES6](https://github.com/airbnb/javascript)
+
+# Code review
+![687474703a2f2f7777772e6f736e6577732e636f6d2f696d616765732f636f6d6963732f7774666d2e6a7067](/uploads/962ebb6c7e3437b65d384b1f43ccadda/687474703a2f2f7777772e6f736e6577732e636f6d2f696d616765732f636f6d6963732f7774666d2e6a7067.jpg)
 
 # References
 [Clean Code](https://github.com/ryanmcdermott/clean-code-javascript)
