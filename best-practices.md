@@ -888,6 +888,8 @@ Airbnb Style Guide
 [ES6](https://github.com/airbnb/javascript)
 
 # Code review
+Code review is systematic examination of computer source code. It is intended to find mistakes overlooked in the initial development phase, improving the overall quality of software.
+
 ![687474703a2f2f7777772e6f736e6577732e636f6d2f696d616765732f636f6d6963732f7774666d2e6a7067](/uploads/962ebb6c7e3437b65d384b1f43ccadda/687474703a2f2f7777772e6f736e6577732e636f6d2f696d616765732f636f6d6963732f7774666d2e6a7067.jpg)
 
 # References
