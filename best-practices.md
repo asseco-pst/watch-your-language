@@ -8,10 +8,10 @@
  * [Process](best-practices#process)
  * [Benefits](best-practices#benefits)
 * [Code review](best-practices#code-review)
- * [Knowledge share](best-practices#knowledge-share)
+ * [Knowledge sharing](best-practices#knowledge-sharing)
  * [Better estimates](best-practices#better-estimates)
  * [Takes time](best-practices#takes-time)
-* [Style Guide](best-practices#style-guide)
+* [Style guide](best-practices#style-guide)
 * [Linter](best-practices#linter)
 * [Compiler](best-practices#Compiler)
 * [References](best-practices#references)
@@ -915,7 +915,7 @@ When a developer is finished working on an issue, another developer looks over t
 
 Code reviews should integrate with a team’s existing process. For example, if a team is using task branching workflows, initiate a code review after all the code has been written and automated tests have been run and passed–but before the code is merged upstream. This ensures the code reviewer’s time is spent checking for things machines miss, and prevents poor coding decisions from polluting the main line of development. 
 
-## Knowledge share
+## Knowledge sharing
 No one is the only person who knows a specific part of the code base. Simply put, code reviews help facilitate knowledge sharing across the code base and across the team. 
 
 > As code reviews expose developers to new ideas and technologies, they write better and better code. 
@@ -941,7 +941,7 @@ When developers know their code will be reviewed by a teammate, they make an ext
 
 Don’t wait for a code review if feedback is needed earlier in the development cycle. Feedback early and often makes for better code, so don't be shy about involving others–whenever that may be. It'll make your work better, but it also makes your teammates better code reviewers. And the virtuous cycle continues....!
 
-# Style Guide
+# Style guide
 ![1-9nMBMt-OugnruBr_M-WuEQ](/uploads/0227a609241bf877374a5dca0b18dea2/1-9nMBMt-OugnruBr_M-WuEQ.png)
 
 The most important thing, no matter what your preferred [javascript style](https://github.com/airbnb/javascript) is, is to be consistent when working with a team or a large codebase that will have to be maintained in the future.
