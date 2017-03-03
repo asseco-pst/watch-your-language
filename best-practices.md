@@ -13,7 +13,7 @@
  * [Takes time](best-practices#takes-time)
 * [Style guide](best-practices#style-guide)
 * [Linter](best-practices#linter)
-* [Compiler](best-practices#Compiler)
+* [Compiler](best-practices#compiler)
 * [References](best-practices#references)
 
 # Clean code
@@ -952,7 +952,7 @@ Code linting is a type of static analysis that is frequently used to find proble
 JavaScript, being a dynamic and loosely-typed language, is especially prone to developer error. Without the benefit of a compilation process, JavaScript code is typically executed in order to find syntax or other errors. Linting tools like [ESLint](http://eslint.org) allow developers to discover problems with their JavaScript code without executing it.
 
 # Compiler
-[Babel](https://babeljs.io) is a essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows you to use ES6 features in your projects and then compiles ES5 for you to use in production.
+[Babel](https://babeljs.io) is essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows you to use ES6 features in your projects and then compiles ES5 for you to use in production.
 
 > Use next generation JavaScript, today.
 
