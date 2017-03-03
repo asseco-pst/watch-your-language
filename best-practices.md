@@ -306,7 +306,6 @@ function showEmployeeList(employees) {
     var expectedSalary = employee.calculateExpectedSalary();
     var experience = employee.getExperience();
     var portfolio = employee.type === 'developer' ? employee.getGithubLink() : employee.getMBAProjects();
-
     var data = {
       expectedSalary,
       experience,
@@ -567,9 +566,7 @@ function newRequestModule(url) {
   // ...
 }
 
-var req = newRequestModule;
-inventoryTracker('apples', req, 'www.inventory-awesome.io');
-
+var req = newRequestModule('www.inventory-awesome.io');
 ```
 
 **Good:**
@@ -578,8 +575,7 @@ function newRequestModule(url) {
   // ...
 }
 
-var req = newRequestModule;
-inventoryTracker('apples', req, 'www.inventory-awesome.io');
+var req = newRequestModule('www.inventory-awesome.io');
 ```
 
 ## Classes
