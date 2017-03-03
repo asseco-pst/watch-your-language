@@ -4,6 +4,8 @@
  * [Classes](best-practices#classes)
  * [Concurrency](best-practices#concurrency)
  * [Comments](best-practices#comments)
+* [Linter](best-practices#linter)
+ * [Rules](best-practices#rules)
 * [References](best-practices#references)
 
 # Clean code
@@ -874,7 +876,20 @@ var actions = function() {
 };
 ```
 
+# Linter
+Code linting is a type of static analysis that is frequently used to find problematic patterns or code that doesn’t adhere to certain style guidelines. There are code linters for most programming languages, and compilers sometimes incorporate linting into the compilation process.
+
+JavaScript, being a dynamic and loosely-typed language, is especially prone to developer error. Without the benefit of a compilation process, JavaScript code is typically executed in order to find syntax or other errors. Linting tools like ESLint allow developers to discover problems with their JavaScript code without executing it.
+
+## Rules
+
+Airbnb Style Guide
+[ES5](https://github.com/airbnb/javascript/tree/es5-deprecated/es5)
+[ES6](https://github.com/airbnb/javascript)
+
 # References
 [Clean Code](https://github.com/ryanmcdermott/clean-code-javascript)
 
 [Composition over Inheritance](https://www.youtube.com/watch?v=wfMtDGfHWpA)
+
+[ESLint](http://eslint.org)
