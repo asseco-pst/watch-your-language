@@ -32,8 +32,11 @@ Each of the following topics should not take longer than 1 hour and must be as m
  * [Native vs jQuery](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/callbacks-and-promises#native-vs-jquery)
  * [Leap into the future](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/callbacks-and-promises#leap-into-the-future)
  
-5. [Best practices part I](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices)
-
-6. [Best practices part II](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices)
-
+5. [Best practices](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices)
+ * [Clean code](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices#clean-code)
+ * [Test-Driven Development](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices#test-driven-development)
+ * [Code review](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices#code-review)
+ * [Style guide](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices#style-guide)
+ * [Linter](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices#linter)
+ * [Compiler](http://172.25.1.187/learn-peer-to-peer/watch-your-language/wikis/best-practices#compiler)
  
