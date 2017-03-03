@@ -7,6 +7,9 @@
 * [Linter](best-practices#linter)
  * [Rules](best-practices#rules)
 * [Code review](best-practices#code-review)
+ * [What is it](best-practices#what-is-it)
+ * [Knowledge share](best-practices#knowledge-share)
+ * [Takes time](best-practices#takes-time)
 * [References](best-practices#references)
 
 # Clean code
@@ -888,9 +891,41 @@ Airbnb Style Guide
 [ES6](https://github.com/airbnb/javascript)
 
 # Code review
-Code review is systematic examination of computer source code. It is intended to find mistakes overlooked in the initial development phase, improving the overall quality of software.
 
 ![687474703a2f2f7777772e6f736e6577732e636f6d2f696d616765732f636f6d6963732f7774666d2e6a7067](/uploads/962ebb6c7e3437b65d384b1f43ccadda/687474703a2f2f7777772e6f736e6577732e636f6d2f696d616765732f636f6d6963732f7774666d2e6a7067.jpg)
+
+## What is it
+When a developer is finished working on an issue, another developer looks over the code and considers questions like:
+
+*  Are there any obvious logic errors in the code?
+* Looking at the requirements, are all cases fully implemented?
+* Are the new automated tests sufficient for the new code? Do existing automated tests need to be rewritten to account for changes in the code?
+* Does the new code conform to existing style guidelines?
+
+Code reviews should integrate with a team’s existing process. For example, if a team is using task branching workflows, initiate a code review after all the code has been written and automated tests have been run and passed–but before the code is merged upstream. This ensures the code reviewer’s time is spent checking for things machines miss, and prevents poor coding decisions from polluting the main line of development. 
+
+## Knowledge share
+No one is the only person who knows a specific part of the code base. Simply put, code reviews help facilitate knowledge sharing across the code base and across the team. 
+
+> As code reviews expose developers to new ideas and technologies, they write better and better code. 
+
+## Takes time
+Sure, they take time. But that time isn't wasted–far from it.
+
+> When done right, code reviews actually save time in the long run.
+
+Here are three ways to optimize for that. 
+
+### Share the load
+When an author selects reviewers, they cast a wide net across the team. Any engineers can give input. This decentralizes the process so that no one is a bottleneck, and ensures good coverage for code review across the team.
+
+### Review before merging
+Requiring code review before merging upstream ensures that no code gets in unreviewed. Which means that the questionable architectural decisions made at 2am and the improper use of a factory pattern by the intern are caught before they have a chance to make a lasting (and regrettable) impact on your application.
+
+### Use peer pressure to your advantage
+When developers know their code will be reviewed by a teammate, they make an extra effort to ensure that all tests are passing and the code is as well-designed as they can make it so the review will go smoothly. That mindfulness also tends to make the coding process itself go smoother and, ultimately, faster.
+
+Don’t wait for a code review if feedback is needed earlier in the development cycle. Feedback early and often makes for better code, so don't be shy about involving others–whenever that may be. It'll make your work better, but it also makes your teammates better code reviewers. And the virtuous cycle continues....!
 
 # References
 [Clean Code](https://github.com/ryanmcdermott/clean-code-javascript)
@@ -898,3 +933,5 @@ Code review is systematic examination of computer source code. It is intended to
 [Composition over Inheritance](https://www.youtube.com/watch?v=wfMtDGfHWpA)
 
 [ESLint](http://eslint.org)
+
+[Code reviews](https://www.atlassian.com/agile/code-reviews)
