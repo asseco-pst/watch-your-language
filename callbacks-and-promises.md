@@ -1,8 +1,8 @@
- * [Callbacks](callbacks-and-promises#callbacks)
- * [Callback Hell](callbacks-and-promises#callback-hell)
- * [Promises](callbacks-and-promises#promises)
- * [Native vs jQuery](callbacks-and-promises#native-vs-jquery)
- * [Leap into the future](callbacks-and-promises#leap-into-the-future)
+ * [Callbacks](#callbacks)
+ * [Callback Hell](#callback-hell)
+ * [Promises](#promises)
+ * [Native vs jQuery](#native-vs-jquery)
+ * [Leap into the future](#leap-into-the-future)
 
 # Callbacks
 
@@ -47,7 +47,7 @@ $.ajax( "myurl" ).done(function(response) {
 - If the call is done successfully then the callback for success (`.done`) and `always` will execute
 - If the call is done but an error happens the callback for `fail` is executed
 - `jQuery` is being used here for sintax simplicity, this can also be done using `fetch` or `XMLHttpRequest`
-- This code has a problem, if we wanted to use the response outside the call back we would have syncronism problems, this will be handled ahead in ["Promises"](callbacks-and-promises#promises).
+- This code has a problem, if we wanted to use the response outside the call back we would have syncronism problems, this will be handled ahead in ["Promises"](#promises).
 
 ```javascript
 $.ajax( "myurl" )

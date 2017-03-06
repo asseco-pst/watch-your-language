@@ -1,17 +1,17 @@
- * [Mind the gap, Now & later](async#mind-the-gap-now-later)
- * [Sync vs Async](async#sync-vs-async)
- * [A Program in Chunks](async#a-program-in-chunks)
- * [Event Loop](async#event-loop)
-  * [Call stack](async#call-stack)
-  * [Blowing the stack](async#blowing-the-stack)
-  * [Blocking operations](async#blocking-operations)
-  * [Async callbacks and the Call stack](async#async-callbacks-and-the-call-stack)
-  * [Is JS single-threaded?](async#is-js-single-threaded)
-  * [The big picture](async#the-big-picture)
-  * [Concurrency and the Event Loop](async#concurrency-and-the-event-loop)
-  * [Async callbacks and the Event Loop](async#async-callbacks-and-the-event-loop)
-  * [Render Queue](async#render-queue)
- * [References](async#references)
+ * [Mind the gap, Now & later](#mind-the-gap-now-later)
+ * [Sync vs Async](#sync-vs-async)
+ * [A Program in Chunks](#a-program-in-chunks)
+ * [Event Loop](#event-loop)
+  * [Call stack](#call-stack)
+  * [Blowing the stack](#blowing-the-stack)
+  * [Blocking operations](#blocking-operations)
+  * [Async callbacks and the Call stack](#async-callbacks-and-the-call-stack)
+  * [Is JS single-threaded?](#is-js-single-threaded)
+  * [The big picture](#the-big-picture)
+  * [Concurrency and the Event Loop](#concurrency-and-the-event-loop)
+  * [Async callbacks and the Event Loop](#async-callbacks-and-the-event-loop)
+  * [Render Queue](#render-queue)
+ * [References](#references)
 
 # Mind the gap, Now & later
 
@@ -248,7 +248,7 @@ And we're done.
 **It has a very tiny and simple task. It looks at the callback queue and at the call stack, if the stack is empty it takes the first thing in the queue and pushes it on the stack**
 
 ## Async callbacks and the Event Loop
-Remember the example back in the "[Async callbacks and the Call stack](async#async-callbacks-and-the-call-stack)" section? Where we had `setTimeout(fn, 500)` and asked if the output for `setTimeout(fn, 0)` would be different?
+Remember the example back in the "[Async callbacks and the Call stack](#async-callbacks-and-the-call-stack)" section? Where we had `setTimeout(fn, 500)` and asked if the output for `setTimeout(fn, 0)` would be different?
 
 As you can see, when you have a timer callback it is handled by the WebAPI. No mather if your timeout is `0` or higher, it will always have the same behaviour. 
 Because:
