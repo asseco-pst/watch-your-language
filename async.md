@@ -112,7 +112,7 @@ But before we get to know what the Event Loop really does, let's see the surroun
 
 The call stack is pretty straightforward, **last in, first out**.
 
-<img src="/uploads/5c55fa14b4b00d40c05054a4907677c9/www.GIFCreator.me_D3KgvJ.gif" width="400"/>
+<img src="http://i.imgur.com/Cnds2ks.gifv" width="400"/>
 
 In the above image we have an example of some synchronous code being executed.
 
@@ -132,7 +132,7 @@ In the above image we have an example of some synchronous code being executed.
 
 We use to hear "Don't blow the stack!". What does this actually mean? We usually know how to solve these, but do we actually understand why we're doing it?
 
-<img src="/uploads/f03eff5ca5cd059d801e84379249d125/www.GIFCreator.me_CF6hUR.gif" width="400"/>
+<img src="http://i.imgur.com/zD2QEAK.gifv" width="400"/>
 
 For example, if we have a function `foo` that is recursive and has not stop condition, we'll have what is represented in the image above.
 
@@ -148,7 +148,7 @@ This is really important and it is in fact one of the most powerful techinques t
 
 Let's see the next example where we have multiple synchronous Ajax requests. <br>I know, I know, they should be asynchronous but these are just synchronous!
 
-<img src="/uploads/78f0030a4e830d6ab7cf3910dd01f9a1/www.GIFCreator.me_mtIJtE.gif" width="400"/>
+<img src="http://i.imgur.com/lmsrfOe.gifv" width="400"/>
 
 1. We call `"//foo.com"` and then we wait... and then it returns
 2. We call `"//bar.com"` and then we wait... and then it returns
@@ -191,7 +191,7 @@ But can you explain me why? If I had defined `0` instead of `5000`, the result w
 <br>
 Let's see how it behaves with regards to the call stack and then we get our answer.
 
-<img src="/uploads/ff1e042365b8553a8a0180341a213698/www.GIFCreator.me_0hw8rn.gif" width="400"/>
+<img src="http://i.imgur.com/6GEov6g.gifv" width="400"/>
 
 In this example we have some asynchronous code, which means, it isn't blocking.
 
@@ -234,7 +234,7 @@ In the big picture, the JS environment is composed by:
 Now that we have the big picture in our minds let's analyse the asynchronous example given before.
 
 <br>
-<img src="/uploads/12c7743570fd88e8c95ed26bfe7d08ac/www.GIFCreator.me_UU3q43.gif" width="400"/>
+<img src="http://i.imgur.com/qiZtnHv.gifv" width="400"/>
 
 1. First `console.log('hi')` goes into the stack and returns
 2. Then the `setTimeout(fn, 5000)` goes into the stack and **redirects** to the WebAPI
@@ -253,7 +253,7 @@ Remember the example back in the "[Async callbacks and the Call stack](#async-ca
 As you can see, when you have a timer callback it is handled by the WebAPI. No mather if your timeout is `0` or higher, it will always have the same behaviour. 
 Because:
 
-<img src="/uploads/dc5bb91043dc7fcf854e51f4b8ef3ce5/www.GIFCreator.me_vjHNc0.gif" width="400"/>
+<img src="http://i.imgur.com/f1wDlTR.gifv" width="400"/>
 
 1. First enters into the stack
 2. Then goes to the WebAPI
@@ -278,8 +278,8 @@ The render queue fires an event every 16ms to render the view and therefore, ref
     <td>Non blocking</td>
   </tr>
   <tr>
-    <td><img src="/uploads/6e1989f87e8e81dbac522170d15ecad6/www.GIFCreator.me_xcjwOq.gif" width="400"/></td>
-    <td><img src="/uploads/59be802a9a473c34c5c1ae2bb6b0467c/www.GIFCreator.me_xxkOsW.gif" width="400"/></td>
+    <td><img src="http://i.imgur.com/Sx52jLH.gifv" width="400"/></td>
+    <td><img src="http://i.imgur.com/YW5p4se.gifv" width="400"/></td>
   </tr>
 </table>
 
