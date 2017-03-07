@@ -74,7 +74,7 @@ function doThis() {
 
 What's callback hell? I know it hurts the eyes but just look at the next picture.
 
-![image](/uploads/155aaa3d8efb4a4b95c00e3096848c5e/image.png)
+![image](http://i.imgur.com/8jPYeQG.png)
 
 For simplicity (sanity) sake instead of explaining callback hell with request let's just say you want to do a countdown, something like "3...2...1...DONE!" but you can only use timeouts, one contrived way of doing so would be the next example
 
@@ -126,7 +126,7 @@ function countDownDone() {
 
 Promise is a language feature that allow us to set what order and steps we want our code to go through without blocking operations (asynchrony) and without having the mess that callback hell is (or at least try not to).
 
-![image](/uploads/b7d357309ac4b402c1019f00181dd22c/image.png)
+![image](http://i.imgur.com/vA9gYZW.png)
 
 Upper branch of the image:
   - A promise when `resolve` is done gets fullfiled and executes the next `.then` available
@@ -136,7 +136,22 @@ Lower branch of the image:
   - A promise when `reject` is done gets rejected and executes the next `.catch` available
   - It will ignore any `.then` between the `.then` in error and the `.catch`
 
-![image](/uploads/bdc4d818f9841de87c454984120e0ec3/image.png)
+
+What is the difference between these four promises?
+
+```javascript
+doSomething().then(function() {
+  return doSomethingElse();
+});
+
+doSomething().then(function() {
+  doSomethingElse();
+});
+
+doSomething().then(doSomethingElse());
+
+doSomething().then(doSomethingElse);
+```
 
   - Most of the time we confuse the 4 examples above
   - 1 and 4 are the `sync` and what it's recommended to be used most of the time
@@ -146,19 +161,19 @@ You can confirm that in a more visual manner with the images below
 
 Number 1:
 
-![image](/uploads/d9ea96d68f69b5d06670a833a3926e2f/image.png)
+![image](http://i.imgur.com/7DubauB.png)
 
 Number 2:
 
-![image](/uploads/4d9f9c5b4c4720bd76b0a5ecb9649904/image.png)
+![image](http://i.imgur.com/OYTCoR3.png)
 
 Number 3:
 
-![image](/uploads/392ad9a37a88ff52b4929b50ab3e31cd/image.png)
+![image](http://i.imgur.com/yRi82DK.png)
 
 Number 4:
 
-![image](/uploads/a56a6598fc654a61eea403c22d064ed4/image.png)
+![image](http://i.imgur.com/YzSd0In.png)
 
 # Native vs jQuery
 
