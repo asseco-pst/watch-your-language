@@ -279,7 +279,7 @@ The render queue fires an event every 16ms to render the view and therefore, ref
   </tr>
   <tr>
     <td><img src="http://i.imgur.com/Sx52jLH.gif" width="400"/></td>
-    <td><img src="http://i.imgur.com/YW5p4se.gif" width="400"/></td>
+    <td><img src="http://i.imgur.com/xOZOPJz.gif" width="400"/></td>
   </tr>
 </table>
 
