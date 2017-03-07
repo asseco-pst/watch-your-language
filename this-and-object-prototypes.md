@@ -313,7 +313,7 @@ myCar.hasProperties() // Properties --> v8 blue
 
 As you can see they are the same, is just different ways to be organize your code base. 
 
-One way you can apply everything about objects and `this` is to use composition without risking polluting the `prototype` chain is to use object composition.
+One way you can apply everything about objects and `this` is to use composition without risking polluting the `prototype` chain.
 
 ## Composition example
 ```javascript
@@ -321,22 +321,47 @@ var hasProperties = function () {
   console.log('Properties -->', this.engine, this.color) 
 }
 
-var car = function(engine, color) {
-  var details = {
-    engine: engine,
-    color: color,
-  }
+var vehicleColor = function(color) {
+  return { color: color }
+}
 
+var vehicleEngine = function(engine) {
+  return { engine: engine }
+}
+
+var car = function carProps(engine, color) {
   return Object.assign( 
     {}, 
-    details,
-    { hasProperties : hasProperties })
+    vehicleEngine(engine),
+    vehicleColor(color),
+    { hasProperties: hasProperties }
+  )
+}
+
+var boat = function boatProps(color) {
+  return Object.assign( 
+    {},
+    vehicleColor(color),
+    { 
+      engine: 'v8',
+      hasProperties: hasProperties, 
+    }
+  )
 }
 
 var myCar = car('v8', 'blue')
+var myBoat = boat('red')
 
-myCar.hasProperties() //  Properties --> v8 blue
+myCar.hasProperties() // Properties --> v8 blue
+myBoat.hasProperties() // Properties --> v8 red
 ```
+
+- Instead of declaring a `class` or a `constructor` we use a `function expression`
+- Let's say we declare a `car` and a `boat` that have similiar, but not equal, properties
+- Each property is his own function that returns an object, for example `vehicleColor` and `vehicleEngine`
+- Each new object, like `car` and `boat`, only compose based on their need, in this case all `boat` objects have the same engine
+
+*NOTE:* `Object.assign` is a ES6 method so be aware if you want backwards compatibility with other browsers that aren't green field you should need to use a polyfill or a transpiler
 
 # References
 
@@ -347,3 +372,5 @@ myCar.hasProperties() //  Properties --> v8 blue
 [Prototypes](http://raganwald.com/2013/02/10/prototypes.html)
 
 [Class vs prototype](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9#.rl4lt19sv)
+
+[Video: Composition over inheritance](https://www.youtube.com/watch?v=wfMtDGfHWpA)

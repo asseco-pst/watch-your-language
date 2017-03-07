@@ -37,4 +37,3 @@ A course about JavaScript fundamentals, based on "[You don’t know JS](https://
  * [Style guide](https://github.com/Exictos-DCS/watch-your-language/blob/master/best-practices.md#style-guide)
  * [Linter](https://github.com/Exictos-DCS/watch-your-language/blob/master/best-practices.md#linter)
  * [Compiler](https://github.com/Exictos-DCS/watch-your-language/blob/master/best-practices.md#compiler)
- 
