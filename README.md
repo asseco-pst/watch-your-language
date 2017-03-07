@@ -2,8 +2,6 @@
 
 A course about JavaScript fundamentals, based on "[You don’t know JS](https://github.com/getify/You-Dont-Know-JS)" book series from Kyle Simpson where we’ll take a practical and interactive approach so you don’t get bored and really learn what JavaScript is made of.
 
-Each of the following topics should not take longer than 1 hour and must be as much practical as possible. All the material related to these topics will be available at GitLab “watch-your-language” repo.
-
 # Syllabus
 
 1. [Scopes](https://github.com/Exictos-DCS/watch-your-language/blob/master/scopes.md)
