@@ -892,7 +892,7 @@ The motto of test-driven development is "Red, Green, Refactor."
 * Red: Create a test and make it fail.
 * Green: Make the test pass by any means necessary.
 * Refactor: Change the code to remove duplication in your project and to improve the design while ensuring that all tests still pass.
-![red-green-refactorFINAL2](/uploads/4bd32f005002cfed5b16deea99eb0c4e/red-green-refactorFINAL2.png)
+![red-green-refactorFINAL2](http://i.imgur.com/WaMaLdp.png)
 
 ## Benefits
 * The suite of unit tests provides constant feedback that each component is still working.
@@ -904,7 +904,7 @@ The motto of test-driven development is "Red, Green, Refactor."
 * Reduced debugging time!
 
 # Code review
-![687474703a2f2f7777772e6f736e6577732e636f6d2f696d616765732f636f6d6963732f7774666d2e6a7067](/uploads/962ebb6c7e3437b65d384b1f43ccadda/687474703a2f2f7777772e6f736e6577732e636f6d2f696d616765732f636f6d6963732f7774666d2e6a7067.jpg)
+![687474703a2f2f7777772e6f736e6577732e636f6d2f696d616765732f636f6d6963732f7774666d2e6a7067](http://i.imgur.com/oYkeR5T.jpg)
 
 When a developer is finished working on an issue, another developer looks over the code and considers questions like:
 
@@ -942,7 +942,7 @@ When developers know their code will be reviewed by a teammate, they make an ext
 Don’t wait for a code review if feedback is needed earlier in the development cycle. Feedback early and often makes for better code, so don't be shy about involving others–whenever that may be. It'll make your work better, but it also makes your teammates better code reviewers. And the virtuous cycle continues....!
 
 # Style guide
-![1-9nMBMt-OugnruBr_M-WuEQ](/uploads/0227a609241bf877374a5dca0b18dea2/1-9nMBMt-OugnruBr_M-WuEQ.png)
+![1-9nMBMt-OugnruBr_M-WuEQ](http://i.imgur.com/BX24WZc.png)
 
 The most important thing, no matter what your preferred [javascript style](https://github.com/airbnb/javascript) is, is to be consistent when working with a team or a large codebase that will have to be maintained in the future.
 
