@@ -24,7 +24,7 @@ There are two kinds of look-ups. LHS (left-hand-side) and RHS (right-hand-side) 
 
 **LHS example**
 
-Since JavaScript is compiled, its Engine first compiles code before it executes, spliting up statements like ```var a = 2;``` (*VariableDeclaration*) into two separate steps:
+Since JavaScript is compiled, its Engine first compiles code before it executes, splitting up statements like ```var a = 2;``` (*VariableDeclaration*) into two separate steps:
 
  1. First, ```var a``` (*Identifier*)  to declare it in that Scope. This is performed at the beginning, before code execution.
  2. Later, ```a = 2``` (*AssignmentExpression*) to look up the variable (LHS reference) and assign to it if found. If not found, the variable is declared in the outermost scope (the global scope).
@@ -54,7 +54,7 @@ foo(2);
 var name = 'John';
 ```
 
-When you are writting your first JavaScript line, you're on the *global scope*!! **May day may day!**.
+When you are writing your first JavaScript line, you're on the *global scope*!! **May day may day!**.
 
 Many people say that global scope is bad, but in fact it is your friend. You need it to create modules/APIs that are available across scopes.
 
@@ -225,7 +225,7 @@ function foo(a) {
 foo( 2 ); // 2 4 12
 ```
 
-There are 3 nestes scopes in the above code snippet. Which are identified in the following image.
+There are 3 nested scopes in the above code snippet. Which are identified in the following image.
 
 <img src="https://github.com/getify/You-Dont-Know-JS/raw/master/scope%20%26%20closures/fig2.png" width="400"/>
 
@@ -256,11 +256,11 @@ console.log(a); // output?
 var a = 2;
 ```
 
-From the code snippet 1, it may be tenting to awnser ```2``` or to awnser that ```ReferenceError``` will be thrown.
-In fact, neither the awnsers is correct. ```undefined``` is the output because of **Hoisting**.
+From the code snippet 1, it may be tenting to answer ```2``` or to answer that ```ReferenceError``` will be thrown.
+In fact, neither the answers are correct. ```undefined``` is the output because of **Hoisting**.
 
-Remember that since JavaScript is compiled, its Engine first compiles code before it executes, spliting up statements like ```var a = 2;``` (VariableDeclaration) into two separate steps? 
-That's what's happenning here.
+Remember that since JavaScript is compiled, its Engine first compiles code before it executes, splitting up statements like ```var a = 2;``` (VariableDeclaration) into two separate steps? 
+That's what's happening here.
 
 Our *code snippet 1* should be thought of as being handled like this:
 ```javascript
@@ -400,7 +400,7 @@ After we execute ```hello()```, we assign the value it returned (our inner ```gr
 **```greet()``` still has a reference to that scope, and that reference is called closure.**
 
 ### Modules revisited
-Remember of talking about JavaScript modules? These are the most poweful pattern who leverages the power of closure.
+Remember of talking about JavaScript modules? These are the most powerful pattern who leverages the power of closure.
 
 ```javascript
 var CoolModule = (function module() {
