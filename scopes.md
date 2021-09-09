@@ -225,13 +225,11 @@ function foo(a) {
 foo( 2 ); // 2 4 12
 ```
 
-There are 3 nested scopes in the above code snippet. Which are identified in the following image.
+There are 3 nested scopes in the above code snippet:
 
-<img src="https://github.com/getify/You-Dont-Know-JS/raw/master/scope%20%26%20closures/fig2.png" width="400"/>
-
-* **Bubble 1** encompasses the global scope, and has just one identifier in it: *foo*.
-* **Bubble 2** encompasses the scope of foo, which includes the three identifiers: *a*, *bar* and *b*.
-* **Bubble 3** encompasses the scope of bar, and it includes just one identifier: *c*.
+* Global scope, and has just one identifier in it: *foo*.
+* Scope of *foo*, which includes the three identifiers: *a*, *bar* and *b*.
+* Scope of *bar*, and it includes just one identifier: *c*.
 
 
 ## Hoisting
