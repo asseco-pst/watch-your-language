@@ -47,7 +47,7 @@ $.ajax( "myurl" ).done(function(response) {
 - If the call is done successfully then the callback for success (`.done`) and `always` will execute
 - If the call is done but an error happens the callback for `fail` is executed
 - `jQuery` is being used here for sintax simplicity, this can also be done using `fetch` or `XMLHttpRequest`
-- This code has a problem, if we wanted to use the response outside the call back we would have syncronism problems, this will be handled ahead in ["Promises"](#promises).
+- This code has a problem, if we wanted to use the response outside the callback we would have syncronism problems, this will be handled ahead in ["Promises"](#promises).
 
 ```javascript
 $.ajax( "myurl" )
@@ -274,8 +274,8 @@ console.log('this continues')
 
   - When using the latest `babel` or in Chrome/Firefox you have `async/await` from `ECMAScript2017`
   - This allows you to have a way more easier code to read while having synchronicity
-  - In this case the program continues while `syncExample` is being interpreted
-  - When the await is done resolving then the `syncExample` continues it's code
+  - In this case the program continues while `asyncExample` is being interpreted
+  - When the await is done resolving then the `asyncExample` continues it's code
 
 # References
 

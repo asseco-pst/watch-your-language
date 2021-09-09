@@ -36,8 +36,8 @@ newObj.foo()
 ```
 
 - Instead of having `window.foo()` we now have `newObj.foo()`
-- `this` is no longer the `window`, now it has the `newObject`
-- `this.a` inside `foo()` has the same reference as `newObject.a`
+- `this` is no longer the `window`, now it has the `newObj`
+- `this.a` inside `foo()` has the same reference as `newObj.a`
 
 # How to set `this`
 
@@ -115,7 +115,7 @@ var foo = {
 - If you call `foo.nativeAlert('my message')` it will result in an error because `this` is implicit, instead of referring to the `window` it refers to `foo`
 - Likewise, if you call `foo.myAlert('my message')` it will also return an error because `alert` is not defined in `foo`
 
-To solve this problem we can use `.call` at the comment those properties are called to change the `this` to what we want, in this case `window`
+To solve this problem we can use `.call` at the moment those properties are called to change the `this` to what we want, in this case `window`
 
 ```javascript
 foo.nativeAlert.call(window, 'my message')
@@ -188,8 +188,8 @@ var bar = new Foo(obj);
 console.log( bar.a, bar.b ); // 2 4
 ```
 
-- `new`can be used in functions and sets the `this`
-- When you use the new for a function you can call it a "constructor call"
+- `new` can be used in functions and sets the `this`
+- When you use the `new` for a function you can call it a "constructor call"
 - It can also be used to create new objects although `Object.create()` is preferred
 
 ## Priority/Order (higher to lower)
@@ -269,7 +269,7 @@ You can see a function as a constructor (since only functions have the `.prototy
 
 Beware that prototypes must be assigned using `Object.create()` or `new` so that they don't maintain reference as shown in the example before.
 
-Sounds confusing? That's normal, this was not very well designed in JS which makes for an harder time to explain and to understand, let's make it easier by seeing how you can implement both `class` and `prototype` in JS
+Sounds confusing? That's normal, this was not very well designed in JS which makes for an harder time to explain and to understand, let's make it easier by seeing how you can implement both `class` and `prototype` in JS.
 
 Note: As of `ES6` the `class` keyword was implemented which is just "syntactic sugar", it's the same as saying that it's not the same as Java classes, it's just running `prototypes` "under the hood".
 
@@ -311,7 +311,7 @@ myCar.constructor('v8', 'blue')
 myCar.hasProperties() // Properties --> v8 blue
 ```
 
-As you can see they are the same, is just different ways to be organize your code base. 
+As you can see they are the same, is just different ways to organize your code base. 
 
 One way you can apply everything about objects and `this` is to use composition without risking polluting the `prototype` chain.
 
